@@ -61,10 +61,10 @@ autocmd("User Run", {
 })
 
 -- Markdown
--- autocmd("User Run", {
---   pattern = { "*.md" },
---   command = [[ MarkdownPreviewToggle ]]
--- })
+autocmd("User Run", {
+  pattern = { "*.md" },
+  command = [[ MarkdownPreview ]]
+})
 
 -- LaTeX
 autocmd("User Run", {

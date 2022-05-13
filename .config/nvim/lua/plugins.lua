@@ -67,12 +67,12 @@ return require("packer").startup(function(use)
     config = get_config("lsp")
   }
 
-  -- Markdown previewer
-  -- use {
-  --   opt = true,
-  --   ft = "markdown",
-  --   config = get_config("markdown-preview")
-  -- }
+  -- Markdown preview
+  use {
+    "davidgranstrom/nvim-markdown-preview",
+    opt = true,
+    ft = "markdown"
+  }
 
   -- Statusline
   use {
