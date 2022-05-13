@@ -1,6 +1,11 @@
 local fn = vim.fn
 local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
 
+-- Returns require function in Packer "config" parameter
+local function get_config(name)
+  return string.format("require(\"config.%s\")", name)
+end
+
 -------------------
 -- Configuration --
 -------------------
@@ -21,14 +26,14 @@ return require("packer").startup(function(use)
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
-    config = function () require("config.treesitter") end
+    config = get_config("treesitter")
   }
 
   -- Autopairs
   use {
     "windwp/nvim-autopairs",
     requires = "nvim-treesitter/nvim-treesitter",
-    config = function () require("config.autopairs") end
+    config = get_config("autopairs")
   }
 
   -- Autotag
@@ -49,44 +54,44 @@ return require("packer").startup(function(use)
   use {
     "numToStr/Comment.nvim",
     requires = "nvim-treesitter/nvim-treesitter",
-    config = function() require("config.comment") end
+    config = get_config("comment")
   }
 
   -- Automatically make missing directories when saving a file,
   -- works like `mkdir -p` on Linux.
-  use { "jghauser/mkdir.nvim" }
+  use "jghauser/mkdir.nvim"
 
   -- LSP config
   use {
     "neovim/nvim-lspconfig",
-    config = function() require("config.lsp") end
+    config = get_config("lsp")
   }
 
-  -- Markdown preview
+  -- Markdown previewer
   -- use {
   --   opt = true,
   --   ft = "markdown",
-  --   config = function () require("config.markdown-preview") end
+  --   config = get_config("markdown-preview")
   -- }
 
   -- Statusline
   use {
     "nvim-lualine/lualine.nvim",
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
-    config = function () require("config.lualine") end
+    config = get_config("lualine")
   }
 
   -- Tabs
   use {
     "romgrk/barbar.nvim",
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
-    config = function () require("config.barbar") end
+    config = get_config("barbar")
   }
 
   -- Nord theme
   use {
     "shaunsingh/nord.nvim",
-    config = function () require("config.nord") end
+    config = get_config("nord")
   }
 
   if Packer_bootstrap then
