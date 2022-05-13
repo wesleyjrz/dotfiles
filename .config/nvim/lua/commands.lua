@@ -51,7 +51,7 @@ autocmd("User Run", {
 -- HTML
 autocmd("User Run", {
   pattern = { "*.html" },
-  command = [[ silent !$BROWSER % ]]
+  command = [[ silent !live-server %:p:h & ]]
 })
 
 -- CSS (Joke)
