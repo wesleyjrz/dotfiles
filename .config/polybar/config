@@ -1,0 +1,178 @@
+;  Wesley Vieira S. Jr.
+;
+;      ,= ,-_-. =.
+;     ((_/)o o(\_))
+;      `-'(. .)`-'
+;          \_/
+;
+;  github.com/wesleyjrz
+;  gitlab.com/wesleyjrz
+
+[colors]
+; Colours from https://nordtheme.com
+
+; Polar Night (Darkest to Lightest)
+pn-1 = #2E3440
+pn-2 = #3B4252
+pn-3 = #434C5E
+pn-4 = #4C566A
+
+; Snow Storm (Darkest to Lightest)
+ss-1 = #D8DEE9
+ss-2 = #E5E9F0
+ss-3 = #ECEFF4
+
+; Frost (See Nord Theme Docs for reference)
+f-1 = #8FBCBB
+f-2 = #88C0D0
+f-3 = #81A1C1
+f-4 = #5E81AC
+
+; Aurora (See Nord Theme Docs for reference)
+a-1 = #BF616A
+a-2 = #D08770
+a-3 = #EBCB8B
+a-4 = #A3BE8C
+a-5 = #B48EAD
+
+[bar/main]
+width = 100%
+height = 21
+radius = 0
+fixed-center = true
+
+background = ${colors.pn-1}
+foreground = ${colors.ss-2}
+
+font-0 = JetBrains Mono Nerd Font:size=10:weight=bold;2
+font-1 = Play:size=12:weight=bold;3
+font-2 = FontAwesome:size=11;3
+font-3 = Ubuntu:size=10:weight=bold;2
+
+modules-left = i3 title
+modules-center = date
+modules-right = memory cpu pulseaudio wireless-network wired-network powermenu
+
+tray-position = none
+
+wm-restack = i3
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[settings]
+format-padding = 2
+screenchange-reload = true
+
+[module/i3]
+type = internal/i3
+
+format = "<label-state><label-mode>"
+format-padding = 0
+index-sort = true
+
+label-mode = "%mode%"
+label-mode-padding = 1
+label-mode-background = ${colors.a-5}
+
+; focused = Active workspace on focused monitor
+label-focused = "%index%"
+label-focused-background = ${colors.f-4}
+label-focused-padding = 1
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = "%index%"
+label-unfocused-padding = 1
+
+; visible = Active workspace on unfocused monitor
+label-visible = "%index%"
+label-visible-background = ${self.label-focused-background}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = "%index%"
+label-urgent-background = ${colors.a-1}
+label-urgent-padding = 1
+
+[module/title]
+type = internal/xwindow
+
+format = "<label>"
+format-background = ${colors.pn-3}
+
+label = "%{T4}%title%%{T-}"
+label-maxlen = 36
+
+[module/date]
+type = internal/date
+interval = 1.0
+
+label = "%{T2}%date% %time%%{T-}"
+
+time = "%H:%M"
+date-alt = "%a, %d %b"
+
+[module/memory]
+type = internal/memory
+interval = 2
+
+label = "%{A3:termite -e htop:}%{F#8FBCBB} %percentage_used:2%%%{F-}%{A}"
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+
+label = "%{A3:termite -e htop:}%{F#8FBCBB} %percentage:2%%%{F-}%{A}"
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = "%{A3:termite -e pulsemixer:}%{F#8FBCBB}<ramp-volume><label-volume>%%{F-}%{A}"
+format-muted = "%{A3:termite -e pulsemixer:}%{F#BF616A}<label-muted>%{F-}%{A}"
+
+label-volume = " %percentage:2%"
+label-muted = "婢 Mtd"
+
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 墳
+
+[module/wired-network]
+type = internal/network
+interface = enp2s0
+interval = 3.0
+
+format-connected = "%{F#8FBCBB}<label-connected>%{F-}"
+format-disconnected = "%{F#BF616A}<label-disconnected>%{F-}"
+
+label-connected = "爵 Ethernet"
+label-disconnected = "睊 Disconnected"
+
+[module/wireless-network]
+type = internal/network
+interface = wlan0
+interval = 3.0
+
+format-connected = "%{A3:termite -e iwctl:}%{F#8FBCBB}<label-connected>%{F-}%{A}"
+format-disconnected = "%{A3:termite -e iwctl:}%{F#BF616A}<label-disconnected>%{F-}%{A}"
+
+label-connected = "直 %essid%"
+label-disconnected = "睊 Disconnected"
+
+[module/powermenu]
+type = custom/menu
+format-padding = 0
+
+label-open = "%{B#BF616A}%{T3}    %{T-}%{B-}"
+label-close = "%{B#A3BE8C}%{F#434C5E}%{T3}    %{T-}%{F-}%{B-}"
+
+menu-0-0 = "%{B#EBCB8B}%{F#434C5E}%{T3}    %{T-}%{F-}%{B-}"
+menu-0-0-exec = systemctl suspend
+menu-0-1 = "%{B#D08770}%{T3}    %{T-}%{B-}"
+menu-0-1-exec = reboot
+menu-0-2 = "%{B#BF616A}%{T3}    %{T-}%{B-}"
+menu-0-2-exec = poweroff
