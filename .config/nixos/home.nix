@@ -70,6 +70,7 @@ in {
       nodePackages.npm
       nodePackages.pyright
       nodePackages.bash-language-server
+      nodePackages.live-server
       # rustup
 
       ### Desktop environment
