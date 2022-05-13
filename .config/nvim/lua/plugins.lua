@@ -1,5 +1,8 @@
 local fn = vim.fn
-local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
+local install_path = fn.stdpath("data").."/site/pack/packer/opt/packer.nvim"
+
+-- Load list of supported programming languages
+require("config.prog-langs")
 
 -- Returns require function in Packer "config" parameter
 local function get_config(name)
@@ -20,11 +23,17 @@ end
 
 return require("packer").startup(function(use)
   -- Let Packer manage itself
-  use "wbthomason/packer.nvim"
+  use {
+    "wbthomason/packer.nvim",
+    opt = true,
+    cmd = "LoadPacker"
+  }
 
   -- Treesitter configuration and abstraction layer
   use {
     "nvim-treesitter/nvim-treesitter",
+    opt = true,
+    ft = Prog_langs,
     run = ":TSUpdate",
     config = get_config("treesitter")
   }
@@ -32,6 +41,8 @@ return require("packer").startup(function(use)
   -- Autopairs
   use {
     "windwp/nvim-autopairs",
+    opt = true,
+    ft = Prog_langs,
     requires = "nvim-treesitter/nvim-treesitter",
     config = get_config("autopairs")
   }
@@ -47,12 +58,16 @@ return require("packer").startup(function(use)
   -- Rainbow brackets
   use {
     "p00f/nvim-ts-rainbow",
+    opt = true,
+    ft = Prog_langs,
     requires = "nvim-treesitter/nvim-treesitter"
   }
 
   -- Comment and uncomment easily
   use {
     "numToStr/Comment.nvim",
+    opt = true,
+    ft = Prog_langs,
     requires = "nvim-treesitter/nvim-treesitter",
     config = get_config("comment")
   }
@@ -64,6 +79,9 @@ return require("packer").startup(function(use)
   -- LSP config
   use {
     "neovim/nvim-lspconfig",
+    opt = true,
+    -- NOTE: I don't have a LSP for every language in my list
+    ft = Prog_langs,
     config = get_config("lsp")
   }
 

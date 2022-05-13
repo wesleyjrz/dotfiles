@@ -1,9 +1,5 @@
 require("nvim-treesitter.configs").setup {
-  ensure_installed = {
-    "bash", "c", "cpp", "lua", "python",
-    "html", "css", "scss", "latex", "markdown",
-    "comment", "regex"," nix", "todotxt", "vim", "json"
-  },
+  ensure_installed = Prog_langs,
   highlight = {
     enable = true, -- "false" will disable the whole extension
     disable = { "txt" },

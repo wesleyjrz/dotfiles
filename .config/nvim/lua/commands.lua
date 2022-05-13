@@ -106,6 +106,12 @@ autocmd("BufWritePost", {
   command = [[ PackerCompile ]]
 })
 
+autocmd("BufEnter", {
+  -- Load Packer when "plugins.lua" is opened
+  pattern = { "plugins.lua" },
+  command = [[ silent LoadPacker ]]
+})
+
 -- I need a better HTTP server that runs in background and updates automatically...
 -- Start HTTP server
 -- usercmd("HttpServer", "silent !simple-http-server --index --ip 127.0.0.1 --port 8080 --open --silent %:p:h &", {})
