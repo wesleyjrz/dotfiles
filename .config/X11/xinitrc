@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# Load user resources
+xrdb -merge $XDG_CONFIG_HOME/X11/xresources
+
+# Load Window Manager
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
+
+# Set auto blank and monitor's energy saving mode
+xset +dpms
+
+# Start "Desktop" programs
+nitrogen --restore &                                                # Wallpaper
+picom -Cb --config $HOME/.config/picom/picom.conf &                 # Compositor
+greenclip daemon &                                                  # Clipboard manager
+unclutter --timeout 30 --fork &                                     # Cursor auto-hider
+xss-lock --transfer-sleep-lock -- i3lock-fancy-rapid 2 4 --nofork & # Screen locker
+redshift &                                                          # Redshift (Blue light filter)
+exec i3                                                             # Window Manager
