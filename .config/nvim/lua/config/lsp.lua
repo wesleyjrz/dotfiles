@@ -1,3 +1,4 @@
+local lspconfig = require("lspconfig")
 local key = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
@@ -5,13 +6,14 @@ local opts = { noremap = true, silent = true }
 -- Keymappings --
 -----------------
 
-key("n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+-- Open diagnostic float window (Space + d)
+key("n", "<space>d", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 
--- Navigate between diagnostics
+-- Navigate between diagnostics (Space + k / j)
 key("n", "<space>k", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
 key("n", "<space>j", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
 
--- Add buffer diagnostics to the location list
+-- Add buffer diagnostics to the location list (Space + l)
 -- (Show the buffer with all diagnostics)
 key("n", "<space>l", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 
@@ -23,17 +25,17 @@ key("n", "<space>l", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 vim.diagnostic.config({ virtual_text = false })
 
 -- bash-language-server (Bash script)
-require("lspconfig").bashls.setup {}
+lspconfig.bashls.setup {}
 
 -- clangd (C, C++, Objective-C and Objective-C++)
-require("lspconfig").clangd.setup {}
+lspconfig.clangd.setup {}
 
 -- sumneko-lua-language-server (Lua)
 local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
-require("lspconfig").sumneko_lua.setup {
+lspconfig.sumneko_lua.setup {
   settings = {
     Lua = {
       runtime = {
@@ -52,7 +54,7 @@ require("lspconfig").sumneko_lua.setup {
 }
 
 -- pyright (Python)
-require("lspconfig").pyright.setup {
+lspconfig.pyright.setup {
   python = {
     analysis = {
       autoSearchPaths = true,
