@@ -13,5 +13,16 @@ You may notice that I use **NixOS**, which isn't a minimal system as I would lik
 ### Why I don't keep all my dotfiles in `home.nix`
 I don't keep all my configurations within `home.nix` because it has a big lack of support for "advanced" configurations that I'd like to use and I wouldn't like to keep a huge configuration file to do everything (I would separate my `home.nix` in various modules if I use **home-manager** to manage it). Btw, I use it to manage some simple dotfiles.
 
+### Some dotfiles I don't keep here and why
+- **Chromium**, I don't even know where it keeps the configuration.
+- **GIMP**, its configuration is very confusing and changes a lot.
+- **Monero GUI**, it is a very simple configuration and I don't want to worry about security.
+- **Nitrogen**, it's just a small configuration with nothing important.
+- **pipe-viewer**, I use the default configuration.
+- **rclone**, because in my last dotfiles repo I just left my cloud tokens there (lol). I know I could encrypt it, but I don't like to enter my password every time I mount my **rclone** partitions.
+
+### Where is the fonts, icons and themes used in these dotfiles
+I will leave a link for every asset here soon.
+
 # License
 Released under the MIT License unless otherwise specified by license files in subfolders.
