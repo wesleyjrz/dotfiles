@@ -32,25 +32,25 @@ autocmd("BufUnload", {
 
 -- Shell Script
 autocmd("User Run", {
-  pattern = { "*.sh" },
+  pattern = "*.sh",
   command = [[ !/bin/sh  % ]]
 })
 
 -- Python
 autocmd("User Run", {
-  pattern = { "*.py" },
+  pattern = "*.py",
   command = [[ !python3 % ]]
 })
 
 -- Lua
 autocmd("User Run", {
-  pattern = { "*.lua" },
+  pattern = "*.lua",
   command = [[ !lua % ]]
 })
 
 -- HTML
 autocmd("User Run", {
-  pattern = { "*.html" },
+  pattern = "*.html",
   command = [[ silent !live-server %:p:h & ]]
 })
 
@@ -62,19 +62,19 @@ autocmd("User Run", {
 
 -- Markdown
 autocmd("User Run", {
-  pattern = { "*.md" },
+  pattern = "*.md",
   command = [[ MarkdownPreview ]]
 })
 
 -- LaTeX
 autocmd("User Run", {
-  pattern = { "*.tex" },
+  pattern = "*.tex",
   -- Convert tex to pdf and send a SIGHUP signal to mupdf (to update changes)
   command = [[ silent !pdflatex % -o %.pdf && pkill --signal SIGHUP mupdf ]]
 })
 
 autocmd("BufUnload", {
-  pattern = { "*.tex" },
+  pattern = "*.tex",
   -- clean log and aux files
   command = [[ silent !rm --force %:p:h/*.log %:p:h/*.aux ]]
 })
@@ -102,19 +102,9 @@ autocmd("BufEnter", { command = [[ set formatoptions-=cro ]] })
 autocmd("BufWritePost", {
   -- Regenerate compiled loader file and load
   -- Packer everytime "plugins.lua" is written
-  pattern = { "plugins.lua" },
+  pattern = "plugins.lua",
   command = [[ PackerCompile ]]
 })
-
-autocmd("BufEnter", {
-  -- Load Packer when "plugins.lua" is opened
-  pattern = { "plugins.lua" },
-  command = [[ silent LoadPacker ]]
-})
-
--- I need a better HTTP server that runs in background and updates automatically...
--- Start HTTP server
--- usercmd("HttpServer", "silent !simple-http-server --index --ip 127.0.0.1 --port 8080 --open --silent %:p:h &", {})
 
 -- Run LOVE project
 usercmd("RunLove", "silent !love %:p:h", {})

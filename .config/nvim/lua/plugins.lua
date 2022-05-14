@@ -1,5 +1,5 @@
 local fn = vim.fn
-local install_path = fn.stdpath("data").."/site/pack/packer/opt/packer.nvim"
+local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
 
 -- Load list of supported programming languages
 require("config.prog-langs")
@@ -23,11 +23,7 @@ end
 
 return require("packer").startup(function(use)
   -- Let Packer manage itself
-  use {
-    "wbthomason/packer.nvim",
-    opt = true,
-    cmd = "LoadPacker"
-  }
+  use "wbthomason/packer.nvim"
 
   -- Treesitter configuration and abstraction layer
   use {
