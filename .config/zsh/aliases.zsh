@@ -104,6 +104,10 @@ alias hex="xxd"       # print file hex
 
 alias fonts="fc-list | bat"
 
+### test connection ###
+
+alias up="ping -c 4 -i 1 archlinux.org ; ping -c 4 -i 1 manjaro.org"
+
 ### cshell ###
 
 alias csh="tcsh"
