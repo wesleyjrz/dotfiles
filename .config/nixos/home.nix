@@ -94,7 +94,7 @@ in {
 
       ### Others
       w3m
-      # unstable.librewolf
+      unstable.librewolf
       ungoogled-chromium
       ranger
       mpv-unwrapped
