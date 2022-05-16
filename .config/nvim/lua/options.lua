@@ -22,7 +22,7 @@ o.sidescrolloff = 8      -- scroll horizontally easier
 -- GUI --
 ---------
 
-o.guifont = "JetBrains Mono:h11", "Ubuntu Mono:h11", "Fira Code:h11"
+o.guifont = "JetBrains Mono:h11"
 o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50" -- block in normal and beam cursor in insert mode
 
 ---------------
