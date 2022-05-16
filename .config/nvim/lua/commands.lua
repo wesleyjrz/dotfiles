@@ -110,7 +110,7 @@ autocmd("BufWritePost", {
 usercmd("RunLove", "silent !love %:p:h", {})
 
 -- Text editing auto-formatting
-autocmd("BufWinEnter", {
+autocmd("BufEnter", {
   pattern = "*.txt",
-  command = [[ set formatoptions=aw2tq ]]
+  command = [[ silent set formatoptions=aw2tq ]]
 })
