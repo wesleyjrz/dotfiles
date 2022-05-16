@@ -108,3 +108,9 @@ autocmd("BufWritePost", {
 
 -- Run LOVE project
 usercmd("RunLove", "silent !love %:p:h", {})
+
+-- Text editing auto-formatting
+autocmd("BufWinEnter", {
+  pattern = "*.txt",
+  command = [[ set formatoptions=aw2tq ]]
+})
