@@ -13,8 +13,9 @@ o.termguicolors = true   -- enables 24-bit RGB color
 o.cmdheight = 1          -- command line height
 o.pumheight = 10         -- max number of items to show in the popup menu
 wo.number = true         -- show line numbers
+wo.numberwidth = 4       -- number of columns to use for line number
 wo.relativenumber = true -- show relative line numbers
-o.cursorline = false     -- highlight current line
+o.cursorline = true      -- highlight current line
 o.scrolloff = 8          -- scroll vertically easier
 o.sidescrolloff = 8      -- scroll horizontally easier
 
