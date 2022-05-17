@@ -88,6 +88,12 @@ return require("packer").startup(function(use)
     ft = "markdown"
   }
 
+  -- Terminal toggler
+  use {
+    "s1n7ax/nvim-terminal",
+    config = get_config("terminal")
+  }
+
   -- Statusline
   use {
     "nvim-lualine/lualine.nvim",
