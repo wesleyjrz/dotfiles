@@ -23,5 +23,7 @@ vim.g.bufferline = {
   animation = false,
   auto_hide = true, -- auto-hide tabs when there's a single buffer
   closable = false, -- enable close button
-  clickable = true  -- enable clickable tabs (mouse support)
+  clickable = true, -- enable clickable tabs (mouse support)
+  -- Hide terminal buffer/tab
+  exclude_name = { "zsh" }
 }
