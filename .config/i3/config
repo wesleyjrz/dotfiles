@@ -232,3 +232,7 @@ $HOME/.config/polybar/launch.sh
 # Alternating layout script
 exec_always --no-startup-id \
 $HOME/.config/i3/alternating_layouts.py
+
+# Startup sound
+exec --no-startup-id \
+mpv --no-video $HOME/Music/win95-startup.wav
