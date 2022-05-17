@@ -20,9 +20,10 @@ I don't keep all my configurations within `home.nix` because it has a big lack o
 - **Nitrogen**, it's just a small configuration with nothing important.
 - **pipe-viewer**, I use the default configuration.
 - **rclone**, because in my last dotfiles repo I just left my cloud tokens there (lol). I know I could encrypt it, but I don't like to enter my password every time I mount my **rclone** partitions.
+- **ranger plugins**, they're git repositories and I want to keep my own repo clean.
 
 ### Where is the fonts, icons and themes used in these dotfiles
-I will leave a link for every asset here soon.
+I will leave a link for every asset here soon. Or maybe I'm going to write a shell script to do the post-installation automatically.
 
 # License
 Released under the MIT License unless otherwise specified by license files in subfolders.
