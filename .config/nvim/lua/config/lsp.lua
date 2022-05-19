@@ -50,7 +50,7 @@ lspconfig.sumneko_lua.setup {
       -- Do not send telemetry data
       telemetry = { enable = false }
     }
-  },
+  }
 }
 
 -- pyright (Python)

@@ -1,5 +1,5 @@
 require("nvim-treesitter.configs").setup {
-  ensure_installed = Prog_langs,
+  ensure_installed = Prog_langs_ts,
   highlight = {
     enable = true, -- "false" will disable the whole extension
     disable = { "txt" },
