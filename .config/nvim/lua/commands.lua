@@ -112,5 +112,5 @@ usercmd("RunLove", "silent !love %:p:h", {})
 -- Text editing auto-formatting
 autocmd("BufEnter", {
   pattern = "*.txt",
-  command = [[ silent set formatoptions=aw2tq ]]
+  command = [[ silent set formatoptions=aw2tq | echo "Autoformat is on, you can disable it by entering \"set autoformat=\" in the command line, also you can set a line length with \"set textwidth=[number]\"" ]]
 })
