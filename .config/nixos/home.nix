@@ -71,6 +71,7 @@ in {
       nodePackages.npm
       nodePackages.pyright
       nodePackages.bash-language-server
+      shellcheck
       nodePackages.live-server
       # rustup
 

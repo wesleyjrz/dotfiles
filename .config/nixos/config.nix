@@ -148,7 +148,7 @@
     XINITRC         = "\${HOME}/.config/X11/xinitrc";
     GTK_RC_FILES    = "\${HOME}/.config/gtk-1.0/gtkrc";
     GTK2_RC_FILES   = "\${HOME}/.config/gtk-2.0/gtkrc";
-    WGETRC          = "\${HOME}/.config/wgetrc";
+    # WGETRC          = "\${HOME}/.config/wgetrc";
   };
 
   ### Shell
