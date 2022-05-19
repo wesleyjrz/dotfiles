@@ -3,3 +3,6 @@
 
 # Ignore todo files
 todo.txt
+
+# Ignore ccls cache
+.ccls-cache
