@@ -27,8 +27,8 @@ vim.diagnostic.config({ virtual_text = false })
 -- bash-language-server (Bash script)
 lspconfig.bashls.setup {}
 
--- clangd (C, C++, Objective-C and Objective-C++)
-lspconfig.clangd.setup {}
+-- ccls (C, C++, Objective-C and Objective-C++)
+lspconfig.ccls.setup {}
 
 -- sumneko-lua-language-server (Lua)
 local runtime_path = vim.split(package.path, ";")

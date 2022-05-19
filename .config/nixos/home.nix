@@ -56,7 +56,8 @@ in {
       gnumake
       binutils
       gcc
-      libclang
+      cmake
+      ccls
       tcsh
       python37Full
       python2Full

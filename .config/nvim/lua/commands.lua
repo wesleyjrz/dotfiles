@@ -16,7 +16,7 @@ key("n", "<C-A-r>", "<cmd>doautocmd User<CR>", { silent = true })
 -- C/C++
 autocmd("User Run", {
   pattern = { "*.c" },
-  command = [[ !gcc % ; ./a.out ]]
+  command = [[ !gcc -ansi -pedantic -Wall -Wextra % ; ./a.out ]]
 })
 
 autocmd("User Run", {
