@@ -59,6 +59,7 @@ in {
       cmake
       ccls
       tcsh
+      nasm
       python37Full
       python2Full
       pypy3
