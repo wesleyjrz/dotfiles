@@ -108,6 +108,12 @@ alias fonts="fc-list | bat"
 
 alias up="ping -c 4 -i 1 archlinux.org ; ping -c 4 -i 1 manjaro.org"
 
+### gcc ###
+
+# My preferred flags to compile C code
+alias gcc="gcc -ansi -pedantic -Wall -Wextra"
+alias cc="gcc -ansi -pedantic -Wall -Wextra"
+
 ### cshell ###
 
 alias csh="tcsh"
