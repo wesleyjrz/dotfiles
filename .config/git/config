@@ -5,7 +5,6 @@
 [core]
   editor = vim
   pager = bat
-  excludesfile = ~/.config/git/exclude
 
 [init]
   defaultBranch = main
