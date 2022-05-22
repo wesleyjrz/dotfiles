@@ -94,7 +94,7 @@ autocmd("BufWritePre", {
 })
 
 -- Don't auto comment new lines and autoformat comments
-autocmd("BufEnter", { command = [[ set formatoptions-=cro | set formatoptions+=aw2cqn ]] })
+autocmd("BufEnter", { command = [[ set formatoptions-=ro | set formatoptions+=aw2cqn ]] })
 
 -- Packer
 autocmd("BufWritePost", {
