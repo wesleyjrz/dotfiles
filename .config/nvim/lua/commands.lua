@@ -7,76 +7,76 @@ local usercmd = vim.api.nvim_create_user_command
 -- Code runner --
 -----------------
 
--- Generated executables will be auto removed when the buffer is
--- unload (closing the buffer or the program)
+-- Generated executables will be auto removed when the buffer is unload
+-- (closing the buffer or the program)
 
 -- Map code runner (Ctrl + Alt + r)
 key("n", "<C-A-r>", "<cmd>doautocmd User<CR>", { silent = true })
 
 -- C/C++
 autocmd("User Run", {
-  pattern = { "*.c" },
-  command = [[ !gcc -ansi -pedantic -Wall -Wextra % ; ./a.out ]]
+	pattern = { "*.c" },
+	command = [[ !gcc -ansi -pedantic -Wall -Wextra % ; ./a.out ]]
 })
 
 autocmd("User Run", {
-  pattern = { "*.C", "*.cc", "*.cp", "*.cpp", "*.cxx", "*.c++" },
-  command = [[ !g++ % ; ./a.out ]]
+	pattern = { "*.C", "*.cc", "*.cp", "*.cpp", "*.cxx", "*.c++" },
+	command = [[ !g++ % ; ./a.out ]]
 })
 
 autocmd("BufUnload", {
-  -- clean remanescent executables
-  pattern = { "*.c", "*.C", "*.cc", "*.cp", "*.cpp", "*.cxx", "*.c++" },
-  command = [[ silent !rm --force a.out ]]
+	-- Clean remanescent executables
+	pattern = { "*.c", "*.C", "*.cc", "*.cp", "*.cpp", "*.cxx", "*.c++" },
+	command = [[ silent !rm --force a.out ]]
 })
 
 -- Shell Script
 autocmd("User Run", {
-  pattern = "*.sh",
-  command = [[ !/bin/sh  % ]]
+	pattern = "*.sh",
+	command = [[ !/bin/sh  % ]]
 })
 
 -- Python
 autocmd("User Run", {
-  pattern = "*.py",
-  command = [[ !python3 % ]]
+	pattern = "*.py",
+	command = [[ !python3 % ]]
 })
 
 -- Lua
 autocmd("User Run", {
-  pattern = "*.lua",
-  command = [[ !lua % ]]
+	pattern = "*.lua",
+	command = [[ !lua % ]]
 })
 
 -- HTML
 autocmd("User Run", {
-  pattern = "*.html",
-  command = [[ silent !live-server %:p:h & ]]
+	pattern = "*.html",
+	command = [[ silent !live-server %:p:h & ]]
 })
 
 -- CSS (Joke)
 autocmd("User Run", {
-  pattern = { "*.css", "*.scss", "*.sass" },
-  callback = function() print("lol, you can't run a stylesheet") end
+	pattern = { "*.css", "*.scss", "*.sass" },
+	callback = function() print("lol, you can't run a stylesheet") end
 })
 
 -- Markdown
 autocmd("User Run", {
-  pattern = "*.md",
-  command = [[ MarkdownPreview ]]
+	pattern = "*.md",
+	command = [[ MarkdownPreview ]]
 })
 
 -- LaTeX
 autocmd("User Run", {
-  pattern = "*.tex",
-  -- Convert tex to pdf and send a SIGHUP signal to mupdf (to update changes)
-  command = [[ silent !pdflatex % -o %.pdf && pkill --signal SIGHUP mupdf ]]
+	pattern = "*.tex",
+	-- Convert tex to pdf and send a SIGHUP signal to mupdf (to update changes)
+	command = [[ silent !pdflatex % -o %.pdf && pkill --signal SIGHUP mupdf ]]
 })
 
 autocmd("BufUnload", {
-  pattern = "*.tex",
-  -- clean log and aux files
-  command = [[ silent !rm --force %:p:h/*.log %:p:h/*.aux ]]
+	pattern = "*.tex",
+	-- Clean log and aux files
+	command = [[ silent !rm --force %:p:h/*.log %:p:h/*.aux ]]
 })
 
 -------------------
@@ -85,25 +85,23 @@ autocmd("BufUnload", {
 
 -- Open help windows vertically
 autocmd("FileType help", {
-  command = [[ wincmd L ]]
+	command = [[ wincmd L ]]
 })
 
--- Remove all trailing whitespace,
--- Trim blank lines at the end of the file
--- and replace tabs with spaces on save
+-- Remove all trailing whitespace and trim blank lines at the end of the file
 autocmd("BufWritePre", {
-  command = [[ %s/\s\+$//e | %s/\($\n\s*\)\+\%$//e | silent retab! ]]
+	command = [[ %s/\s\+$//e | %s/\($\n\s*\)\+\%$//e ]]
 })
 
--- Don't auto comment new lines
-autocmd("BufEnter", { command = [[ set formatoptions-=cro ]] })
+-- Don't auto comment new lines and autoformat comments
+autocmd("BufEnter", { command = [[ set formatoptions-=cro | set formatoptions+=aw2cqn ]] })
 
 -- Packer
 autocmd("BufWritePost", {
-  -- Regenerate compiled loader file and load
-  -- Packer everytime "plugins.lua" is written
-  pattern = "plugins.lua",
-  command = [[ PackerCompile ]]
+	-- Regenerate compiled loader file and load Packer everytime "plugins.lua"
+	-- is written
+	pattern = "plugins.lua",
+	command = [[ PackerCompile ]]
 })
 
 -- Run LOVE project
@@ -111,6 +109,6 @@ usercmd("RunLove", "silent !love %:p:h", {})
 
 -- Text editing auto-formatting
 autocmd("BufEnter", {
-  pattern = "*.txt",
-  command = [[ silent set formatoptions=aw2tq | echo "Autoformat is on, you can disable it by entering \"set autoformat=\" in the command line, also you can set a line length with \"set textwidth=[number]\"" ]]
+	pattern = "*.txt",
+	command = [[ set formatoptions=aw2tqn | echo "Autoformat is on, you can disable it by entering \"set autoformat=\" in the command line, also you can set a line length with \"set textwidth=[number]\"" ]]
 })
