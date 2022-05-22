@@ -110,27 +110,26 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # Take screenshots
 mode "  Screenshot" {
-  # Capture the entire screen
-  bindsym s \
-  exec --no-startup-id maim $HOME/Pictures/screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png
+	# Capture the entire screen
+	bindsym s \
+	exec --no-startup-id maim $HOME/Pictures/screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png
 
-  # Select/Crop a region of the screen to capture
-  bindsym c \
-  exec --no-startup-id maim --select $HOME/Pictures/screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png
+	# Select/Crop a region of the screen to capture
+	bindsym c \
+	exec --no-startup-id maim --select $HOME/Pictures/screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png
 
-  # Capture the current window (Without decorations and transparency)
-  bindsym w \
-  exec --no-startup-id maim --window=$(xdotool getactivewindow) $HOME/Pictures/screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png
+	# Capture the current window (Without decorations and transparency)
+	bindsym w \
+	exec --no-startup-id maim --window=$(xdotool getactivewindow) $HOME/Pictures/screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png
 
-  # Back to normal: Enter, Escape or $mod+r
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
-  bindsym $mod+s mode "default"
+	# Back to normal: Enter, Escape or $mod+r
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+s mode "default"
 }
 
 # Switch to screenshot mode
 bindsym $mod+s mode "  Screenshot"
-
 
 # Kill focused window
 bindsym $mod+q kill
@@ -204,19 +203,19 @@ exec "i3-nagbar --type warning --message 'Will you join the dark side?' --button
 
 # Resize window (there's mouse support too)
 mode " Resize" {
-  # Shrink the window's width
-  bindsym h resize shrink width 10 px or 10 ppt
-  # Grow the window's height
-  bindsym j resize grow height 10 px or 10 ppt
-  # Shrink the window's height
-  bindsym k resize shrink height 10 px or 10 ppt
-  # Grow the window's width
-  bindsym l resize grow width 10 px or 10 ppt
+	# Shrink the window's width
+	bindsym h resize shrink width 10 px or 10 ppt
+	# Grow the window's height
+	bindsym j resize grow height 10 px or 10 ppt
+	# Shrink the window's height
+	bindsym k resize shrink height 10 px or 10 ppt
+	# Grow the window's width
+	bindsym l resize grow width 10 px or 10 ppt
 
-  # Back to normal: Enter, Escape or $mod+r
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
-  bindsym $mod+r mode "default"
+	# Back to normal: Enter, Escape or $mod+r
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
 }
 
 # Switch to resize mode

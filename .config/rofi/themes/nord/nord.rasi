@@ -8,83 +8,83 @@
  */
 
 configuration {
-  display-run: " ";
-  display-drun: "  ";
-  display-window: "  ";
-  display-clipboard: " ";
-  drun-display-format: "{icon} {name}";
-  font: "JetBrainsMono Nerd Font 10.5";
-  modi: "window,run,drun";
-  show-icons: true;
+	display-run: " ";
+	display-drun: "	";
+	display-window: "	";
+	display-clipboard: " ";
+	drun-display-format: "{icon} {name}";
+	font: "JetBrainsMono Nerd Font 10.5";
+	modi: "window,run,drun";
+	show-icons: true;
 }
 
 * {
-  polar-1: #2E3440;
-  polar-2: #3B4252;
-  polar-3: #434C5E;
-  polar-4: #4C566A;
+	polar-1: #2E3440;
+	polar-2: #3B4252;
+	polar-3: #434C5E;
+	polar-4: #4C566A;
 
-  snow-1: #D8DEE9;
-  snow-2: #E5E9F0;
-  snow-3: #ECEFF4;
+	snow-1: #D8DEE9;
+	snow-2: #E5E9F0;
+	snow-3: #ECEFF4;
 
-  frost-1: #8FBCBB;
-  frost-2: #88C0D0;
-  frost-3: #81A1C1;
-  frost-4: #5E81AC;
+	frost-1: #8FBCBB;
+	frost-2: #88C0D0;
+	frost-3: #81A1C1;
+	frost-4: #5E81AC;
 
-  aurora-1: #BF616A;
-  aurora-2: #D08770;
-  aurora-3: #EBCB8B;
-  aurora-4: #A3BE8C;
-  aurora-5: #B48EAD;
+	aurora-1: #BF616A;
+	aurora-2: #D08770;
+	aurora-3: #EBCB8B;
+	aurora-4: #A3BE8C;
+	aurora-5: #B48EAD;
 
-  background-color: @polar-1;
+	background-color: @polar-1;
 
-  border: 0;
-  margin: 0;
-  padding: 1;
-  spacing: 0;
+	border: 0;
+	margin: 0;
+	padding: 1;
+	spacing: 0;
 }
 
 element {
-  padding: 13;
-  text-color: @frost-3;
+	padding: 13;
+	text-color: @frost-3;
 }
 
 element selected {
-  text-color: @aurora-4;
+	text-color: @aurora-4;
 }
 
 element-text {
-  padding: 0;
-  background-color: inherit;
-  text-color: inherit;
+	padding: 0;
+	background-color: inherit;
+	text-color: inherit;
 }
 
 entry {
-  background-color: @polar-2;
-  padding: 12 0 12 0;
-  text-color: @frost-1;
+	background-color: @polar-2;
+	padding: 12 0 12 0;
+	text-color: @frost-1;
 }
 
 inputbar {
-  children: [prompt, entry];
+	children: [prompt, entry];
 }
 
 listview {
-  columns: 1;
-  lines: 10;
+	columns: 1;
+	lines: 10;
 }
 
 mainbox {
-  children: [inputbar, listview];
+	children: [inputbar, listview];
 }
 
 prompt {
-  background-color: @polar-2;
-  enabled: true;
-  font: "JetBrains Mono Nerd Font 12";
-  padding: 12 0 0 12;
-  text-color: @frost-1;
+	background-color: @polar-2;
+	enabled: true;
+	font: "JetBrains Mono Nerd Font 12";
+	padding: 12 0 0 12;
+	text-color: @frost-1;
 }

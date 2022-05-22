@@ -36,30 +36,30 @@ table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
 lspconfig.sumneko_lua.setup {
-  settings = {
-    Lua = {
-      runtime = {
-        version = "5.2",
-        -- Setup your lua path
-        path = runtime_path
-      },
-      -- Get the language server to recognise the `vim` global
-      diagnostics = { globals = { "vim" } },
-      -- Make the server aware of Neovim runtime files
-      workspace = { library = vim.api.nvim_get_runtime_file("", true) },
-      -- Do not send telemetry data
-      telemetry = { enable = false }
-    }
-  }
+	settings = {
+		Lua = {
+			runtime = {
+				version = "5.2",
+				-- Setup your lua path
+				path = runtime_path
+			},
+			-- Get the language server to recognise the `vim` global
+			diagnostics = { globals = { "vim" } },
+			-- Make the server aware of Neovim runtime files
+			workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+			-- Do not send telemetry data
+			telemetry = { enable = false }
+		}
+	}
 }
 
 -- pyright (Python)
 lspconfig.pyright.setup {
-  python = {
-    analysis = {
-      autoSearchPaths = true,
-      diagnosticMode = "workspace",
-      useLibraryCodeForTypes = true
-    }
-  }
+	python = {
+		analysis = {
+			autoSearchPaths = true,
+			diagnosticMode = "workspace",
+			useLibraryCodeForTypes = true
+		}
+	}
 }

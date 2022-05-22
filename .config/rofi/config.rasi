@@ -11,20 +11,20 @@
 */
 
 configuration {
-    modi: "drun";
-    show-icons: true;
-    drun-icon-theme: "ePapirus-Dark";
-    drun-match-fields: "name,generic,exec,categories,keywords";
-    drun-display-format: "{name} [<span weight='light' size='small'>({generic})</span>]";
-    disable-history: true;
-    case-sensitive: false;
-    cycle: false;
-    hover-select: false;
-    eh: 1;
-    click-to-exit: true;
+	modi: "drun";
+	show-icons: true;
+	drun-icon-theme: "ePapirus-Dark";
+	drun-match-fields: "name,generic,exec,categories,keywords";
+	drun-display-format: "{name} [<span weight='light' size='small'>({generic})</span>]";
+	disable-history: true;
+	case-sensitive: false;
+	cycle: false;
+	hover-select: false;
+	eh: 1;
+	click-to-exit: true;
 
   timeout {
-      action: "kb-cancel";
-      delay: 0;
-  }
+		action: "kb-cancel";
+		delay: 0;
+	}
 }

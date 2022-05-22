@@ -1,34 +1,34 @@
 [user]
-  name = Wesley Jr.
-  email = wesleyjr2002@gmail.com
+	name = Wesley Jr.
+	email = wesleyjr2002@gmail.com
 
 [core]
-  editor = vim
-  pager = bat
+	editor = vim
+	pager = bat
 
 [init]
-  defaultBranch = main
+	defaultBranch = main
 
 [alias]
-  cm = commit --message
-  st = status --short
-  patch = add --patch
-  amend = commit --amend
-  last = log -1 HEAD
-  lastmsg = commit --amend --message
-  ignore-changes = update-index --assume-unchanged
+	cm = commit --message
+	st = status --short
+	patch = add --patch
+	amend = commit --amend
+	last = log -1 HEAD
+	lastmsg = commit --amend --message
+	ignore-changes = update-index --assume-unchanged
 
 [filter "lfs"]
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
-  clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
 
 [maintenance]
-  # NOTE: these repositories was added automatically by `zsh snap`
-  repo = /home/wesleyjrz/.config/zsh/plugins/geometry
-  repo = /home/wesleyjrz/.config/zsh/plugins/zsh-autopair
-  repo = /home/wesleyjrz/.config/zsh/plugins/zsh-autosuggestions
-  repo = /home/wesleyjrz/.config/zsh/plugins/zsh-snap
-  repo = /home/wesleyjrz/.config/zsh/plugins/zsh-syntax-highlighting
-  repo = /home/wesleyjrz/.config/zsh/plugins/zsh-z
+	# NOTE: these repositories was added automatically by `zsh snap`
+	repo = /home/wesleyjrz/.config/zsh/plugins/geometry
+	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-autopair
+	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-autosuggestions
+	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-snap
+	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-syntax-highlighting
+	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-z
