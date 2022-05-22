@@ -34,7 +34,6 @@ o.ignorecase = true         -- ignore case in search patterns
 o.smarttab = false          -- when on, a <Tab> in front of a line inserts blanks
 o.smartindent = true        -- do smart autoindenting when starting a new line
 o.autoindent = true         -- copy indent from current line when starting a new line
-o.expandtab = true          -- insert spaces when TAB is pressed
 o.shiftwidth = 2            -- number of spaces to use for each step of (auto)indent
 o.tabstop = 2               -- number of spaces that a <Tab> in the file counts for
 o.wrap = true               -- wrap lines (insert a visual line break)
