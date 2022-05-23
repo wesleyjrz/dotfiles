@@ -32,7 +32,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "0"
+set $ws10 "10"
 
 ######################
 ### Style settings ###
@@ -57,7 +57,7 @@ client.background       #2e3440
 
 # Gaps
 gaps inner 8
-gaps outer 0
+gaps outer -1
 
 ############
 ### Misc ###
