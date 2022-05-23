@@ -86,6 +86,11 @@ alias cp="cp --interactive"
 alias mv="mv --interactive"
 alias rm="rm --interactive"
 
+### Use 2 tab size with bat and diff ###
+
+alias diff="diff --tabsize=2 --color=auto"
+alias bat="bat --tabs 2"
+
 ### todo ###
 
 # Find and print all my `todo.txt` files and print them in order from "A" to "D"
@@ -104,7 +109,7 @@ alias hex="xxd"       # print file hex
 
 alias fonts="fc-list | bat"
 
-### test connection ###
+### Test connection ###
 
 alias up="ping -c 4 -i 1 archlinux.org ; echo '' && ping -c 4 -i 1 manjaro.org"
 
