@@ -38,6 +38,7 @@ o.shiftwidth = 2            -- number of spaces to use for each step of (auto)in
 o.tabstop = 2               -- number of spaces that a <Tab> in the file counts for
 o.wrap = true               -- wrap lines (insert a visual line break)
 o.linebreak = true          -- don't break incomplete words
+o.formatoptions = "aw2crnj" -- default autoformatting options
 o.mouse = "nv"              -- enable mouse support on selected modes
 o.splitbelow = true         -- force all horizontal splits to open below current window
 o.splitright = true         -- force all vertical splits to open in the right of current window

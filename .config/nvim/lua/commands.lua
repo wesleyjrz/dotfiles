@@ -93,8 +93,8 @@ autocmd("BufWritePre", {
 	command = [[ %s/\s\+$//e | %s/\($\n\s*\)\+\%$//e ]]
 })
 
--- Don't auto comment new lines and autoformat comments
-autocmd("BufEnter", { command = [[ set formatoptions-=ro | set formatoptions+=aw2cqn ]] })
+-- Don't auto comment new lines (when open command is used)
+autocmd("BufEnter", { command = [[ set formatoptions-=o ]] })
 
 -- Packer
 autocmd("BufWritePost", {
@@ -110,5 +110,5 @@ usercmd("RunLove", "silent !love %:p:h", {})
 -- Text editing auto-formatting
 autocmd("BufEnter", {
 	pattern = "*.txt",
-	command = [[ set formatoptions=aw2tqn | echo "Autoformat is on, you can disable it by entering \"set autoformat=\" in the command line, also you can set a line length with \"set textwidth=[number]\"" ]]
+	command = [[ set formatoptions=aw2tnp | echo "Autoformat is on, you can disable it by entering \"set autoformat=\" in the command line, also you can set a line length with \"set textwidth=[number]\"" ]]
 })
