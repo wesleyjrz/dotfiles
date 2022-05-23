@@ -59,7 +59,7 @@ alias yta-wav="youtube-dl --extract-audio --audio-format wav"
 ### pipe-viewer ###
 
 # Start pipe-viewer with my preferred settings
-alias yt="pipe-viewer region UK resolution 1080p"
+alias yt="pipe-viewer"
 
 ### scrcpy ###
 
