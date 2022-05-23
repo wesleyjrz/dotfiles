@@ -107,8 +107,6 @@ autocmd("BufWritePost", {
 -- Run LOVE project
 usercmd("RunLove", "silent !love %:p:h", {})
 
--- Text editing auto-formatting
-autocmd("BufEnter", {
-	pattern = "*.txt",
-	command = [[ set formatoptions=aw2tnp | echo "Autoformat is on, you can disable it by entering \"set autoformat=\" in the command line, also you can set a line length with \"set textwidth=[number]\"" ]]
-})
+-- Toggle auto-formatting with nice defaults
+usercmd("EnableFo", "set formatoptions=aw2tnp | echo 'Autoformat is on, set a line length with \"set textwidth=[number]\" or disable it by entering \"DisableFo\" in the command line'", {})
+usercmd("DisableFo", "set formatoptions= | echo 'Autoformat is off'", {})
