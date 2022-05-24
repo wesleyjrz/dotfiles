@@ -1,19 +1,19 @@
 local key = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
----------------------------
--- Tab mappings (Ctrl-t) --
----------------------------
+-----------------
+-- Keymappings --
+-----------------
 
--- Navigate
+-- Navigate (Ctrl + t + h/l/g)
 key("n", "<C-t>h", ":BufferPrevious<CR>", opts)
 key("n", "<C-t>l", ":BufferNext<CR>", opts)
 key("n", "<C-t>g", ":BufferPick<CR>", opts) -- magic buffer-picking mode
 
--- Manage tabs
+-- Manage tabs (Ctrl + t + b/w/x)
 key("n", "<C-t>b", ":BufferMovePrevious<CR>", opts)
 key("n", "<C-t>w", ":BufferMoveNext<CR>", opts)
-key("n", "<C-t>x", ":BufferClose<CR>", opts) -- close buffer
+key("n", "<C-t>x", ":BufferClose<CR>", opts)
 
 -------------------
 -- Configuration --
