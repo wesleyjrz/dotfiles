@@ -9,8 +9,8 @@
 
 configuration {
 	display-run: " ";
-	display-drun: "	";
-	display-window: "	";
+	display-drun: "  ";
+	display-window: "  ";
 	display-clipboard: " ";
 	drun-display-format: "{icon} {name}";
 	font: "JetBrainsMono Nerd Font 10.5";
