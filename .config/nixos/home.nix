@@ -58,6 +58,7 @@ in {
 			gcc
 			cmake
 			ccls
+			libstdcxx5 # C++ Standard Library
 			tcsh
 			nasm
 			python37Full
@@ -65,7 +66,7 @@ in {
 			pypy3
 			lua
 			sumneko-lua-language-server
-			# jdk8
+			gtk4
 			sass
 			love
 			# godot
@@ -74,7 +75,6 @@ in {
 			nodePackages.bash-language-server
 			shellcheck
 			nodePackages.live-server
-			# rustup
 
 			### Desktop environment
 			picom
