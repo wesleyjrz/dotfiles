@@ -108,6 +108,14 @@ return require("packer").startup(function(use)
 		config = get_config("barbar")
 	}
 
+	-- Colouriser
+	use {
+		"norcalli/nvim-colorizer.lua",
+		opt = true,
+		ft = Prog_langs,
+		config = function () require("colorizer").setup() end
+	}
+
 	-- Nord theme
 	use {
 		"shaunsingh/nord.nvim",
