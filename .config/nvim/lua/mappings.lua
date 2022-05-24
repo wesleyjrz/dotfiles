@@ -30,9 +30,3 @@ key("n", "<C-l>", "<C-w>l", opts)
 -- Hide search highlights (Esc / Ctrl + g)
 key("n", "<ESC>", "<C-l><cmd>nohl<CR><C-l>", opts)
 key("n", "<C-g>", "<C-l><cmd>nohl<CR><C-l>", opts)
-
--- Run make
-key("n", "<C-A-m>", "<cmd>make<CR>", opts)
-
--- Enable spell checking (Ctrl + Alt + s)
-key("n", "<C-A-s>", "<cmd>set spell<CR>", {})

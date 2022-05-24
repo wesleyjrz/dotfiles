@@ -108,5 +108,7 @@ autocmd("BufWritePost", {
 usercmd("RunLove", "silent !love %:p:h", {})
 
 -- Toggle auto-formatting with nice defaults
-usercmd("EnableFo", "set formatoptions=aw2tnp | echo 'Autoformat is on, set a line length with \"set textwidth=[number]\" or disable it by entering \"DisableFo\" in the command line'", {})
-usercmd("DisableFo", "set formatoptions= | echo 'Autoformat is off'", {})
+usercmd("EnableFo", [[ set formatoptions=aw2tnp |
+                       echo "Autoformat is on, set a line length with \"set textwidth=[number]\" or disable it by entering \"DisableFo\" in the command line" ]], {})
+usercmd("DisableFo", [[ set formatoptions= |
+                        echo "Autoformat is off" ]], {})
