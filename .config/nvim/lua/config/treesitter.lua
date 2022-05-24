@@ -9,7 +9,7 @@ require("nvim-treesitter.configs").setup {
 	-- External modules
 	autotag = { enable = true },
 	rainbow = {
-		enable = true,
+		enable = false,
 		extended_mode = true
 	}
 }
