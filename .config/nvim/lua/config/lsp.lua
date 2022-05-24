@@ -6,16 +6,15 @@ local opts = { noremap = true, silent = true }
 -- Keymappings --
 -----------------
 
--- Open diagnostic float window (Space + d)
-key("n", "<space>d", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+-- Open diagnostic float window (Space + Space)
+key("n", "<space><space>", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 
 -- Navigate between diagnostics (Space + k / j)
 key("n", "<space>k", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
 key("n", "<space>j", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
 
--- Add buffer diagnostics to the location list (Space + l)
--- (Show the buffer with all diagnostics)
-key("n", "<space>l", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+-- Show a buffer with diagnostics (Space + d)
+key("n", "<space>d", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 
 -------------------
 -- Configuration --
@@ -39,14 +38,17 @@ lspconfig.sumneko_lua.setup {
 	settings = {
 		Lua = {
 			runtime = {
-				version = "5.2",
-				-- Setup your lua path
+				version = "LuaJIT",
 				path = runtime_path
 			},
 			-- Get the language server to recognise the `vim` global
 			diagnostics = { globals = { "vim" } },
-			-- Make the server aware of Neovim runtime files
-			workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+			workspace = {
+				-- Check third party libraries
+				checkThirdParty = true,
+				-- Make the server aware of Neovim runtime files
+				library = { vim.api.nvim_get_runtime_file("", true) }
+			},
 			-- Do not send telemetry data
 			telemetry = { enable = false }
 		}
