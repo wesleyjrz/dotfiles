@@ -133,3 +133,7 @@ alias pp="pypy3"
 alias pypip="python2 -mpip"
 alias py3pip="python3 -mpip"
 alias pppip="pypy3 -mpip"
+
+### w3m ###
+
+alias w3m="w3m -no-cookie -o display_image=false duckduckgo.com"
