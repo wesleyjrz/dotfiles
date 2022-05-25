@@ -117,6 +117,9 @@
 	#		};
 	# };
 
+	# Enable docker daemon
+	virtualisation.docker.enable = true;
+
 	### Environment variables
 	environment.sessionVariables = rec {
 		# Default programs

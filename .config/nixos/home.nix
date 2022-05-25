@@ -75,6 +75,7 @@ in {
 			nodePackages.bash-language-server
 			shellcheck
 			nodePackages.live-server
+			docker
 
 			### Desktop environment
 			picom
