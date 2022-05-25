@@ -94,6 +94,12 @@ return require("packer").startup(function(use)
 		config = get_config("terminal")
 	}
 
+	-- Content stabilizer
+	use {
+		"luukvbaal/stabilize.nvim",
+		config = function () require("stabilize").setup() end
+	}
+
 	-- Statusline
 	use {
 		"nvim-lualine/lualine.nvim",
