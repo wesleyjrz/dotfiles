@@ -141,13 +141,6 @@ in {
 			_7zz
 			# unrar
 
-			### Hacking/Pentest
-			# thc-hydra
-			# john
-			# hashcat
-			# aircrack-ng
-			# crunch
-
 			### Theming
 			nordic
 			papirus-icon-theme

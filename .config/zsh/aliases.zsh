@@ -136,4 +136,10 @@ alias pppip="pypy3 -mpip"
 
 ### w3m ###
 
-alias w3m="w3m -no-cookie -o display_image=false duckduckgo.com"
+alias w3m="w3m -no-cookie -o display_image=false -o use_history=false duckduckgo.com"
+
+### Docker ###
+
+# Use `sudo` with Docker by default
+# NOTE: this may be dangerous
+alias docker="sudo docker"
