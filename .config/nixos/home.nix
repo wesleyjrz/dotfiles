@@ -65,6 +65,7 @@ in {
 			python2Full
 			pypy3
 			lua
+			nodejs
 			sumneko-lua-language-server
 			gtk4
 			sass
