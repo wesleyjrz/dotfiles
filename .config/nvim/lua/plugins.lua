@@ -100,6 +100,14 @@ return require("packer").startup(function(use)
 		config = function () require("stabilize").setup() end
 	}
 
+	-- Carbon now (Create beautiful code snippets)
+	use {
+		"ellisonleao/carbon-now.nvim",
+		opt = true,
+		ft = Prog_langs,
+		config = get_config("carbon")
+	}
+
 	-- Statusline
 	use {
 		"nvim-lualine/lualine.nvim",
