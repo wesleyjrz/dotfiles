@@ -30,6 +30,9 @@ o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50" -- block in normal 
 -- Behaviour --
 ---------------
 
+local foldText = "getline(v:foldstart).' '"
+local foldExpr = "nvim_treesitter#foldexpr()"
+
 o.ignorecase = true         -- ignore case in search patterns
 o.smarttab = false          -- when on, a <Tab> in front of a line inserts blanks
 o.smartindent = true        -- do smart autoindenting when starting a new line
@@ -53,4 +56,6 @@ o.writebackup = false       -- make a backup before overwriting a file
 o.undofile = true           -- save undo history to an undo file
 o.foldlevelstart = 99       -- start without any folding
 wo.foldmethod = "expr"      -- folding method
-wo.foldexpr = "nvim_treesitter#foldexpr()"
+o.fillchars = "fold: "      -- set folding fill chars to blanks
+o.foldtext = foldText       -- prettier folding text
+wo.foldexpr = foldExpr      -- expression used for foldexpr
