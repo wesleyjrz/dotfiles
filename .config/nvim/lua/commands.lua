@@ -96,6 +96,14 @@ autocmd("BufWritePre", {
 -- Don't auto comment new lines (when open command is used)
 autocmd("BufEnter", { command = [[ set formatoptions-=o ]] })
 
+-- Remember last position and foldings
+autocmd("BufWinEnter", {
+	command = [[ silent! loadview ]]
+})
+autocmd("BufWinLeave", {
+	command = [[ mkview ]]
+})
+
 -- Packer
 autocmd("BufWritePost", {
 	-- Regenerate compiled loader file and load Packer everytime "plugins.lua"
