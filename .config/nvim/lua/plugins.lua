@@ -108,6 +108,12 @@ return require("packer").startup(function(use)
 		config = get_config("carbon")
 	}
 
+	-- Zen Mode
+	use {
+		"folke/zen-mode.nvim",
+		config = get_config("zen")
+}
+
 	-- Statusline
 	use {
 		"nvim-lualine/lualine.nvim",
