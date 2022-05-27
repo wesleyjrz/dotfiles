@@ -19,11 +19,6 @@ let
 	});
 
 in {
-	imports = [
-		# Include email configuration
-		./mail.nix
-	];
-
 	### Nixpkgs
 	nixpkgs = {
 		config.allowUnfree = false; # allow non-free software
