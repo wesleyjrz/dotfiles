@@ -155,9 +155,6 @@
 	};
 
 	### Shell
-	# System shell
-	environment.binsh = "${pkgs.dash}/bin/dash";
-	# User shell
 	users.defaultUserShell = pkgs.zsh;
 
 	### Optimisation settings
