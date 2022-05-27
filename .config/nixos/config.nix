@@ -134,6 +134,7 @@
 		ZSHZ_CMD               = "c";
 		ZSHZ_TILDE             = "1";
 		ZSHZ_TRAILING_SLASH    = "1";
+		FZF_DEFAULT_OPTS       = "--height 40% --border";
 
 		# Clean up $HOME (XDG Compliance settings)
 		XDG_RUNTIME_DIR = "/run/user/1000";
