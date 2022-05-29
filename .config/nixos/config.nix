@@ -53,6 +53,12 @@
 		keyMap = "br-abnt2";
 	};
 
+	# IBus input
+	i18n.inputMethod = {
+		enabled = "ibus";
+		ibus.engines = with pkgs.ibus-engines; [ m17n anthy ];
+	};
+
 	### User account
 	# NOTE: don't forget to set a password with `passwd` on first install
 	users.users.wesleyjrz = {
@@ -135,6 +141,11 @@
 		ZSHZ_TILDE             = "1";
 		ZSHZ_TRAILING_SLASH    = "1";
 		FZF_DEFAULT_OPTS       = "--height 40% --border";
+
+		# Enable Ibus
+		GTK_IM_MODULE = "ibus";
+		QT_IM_MODULE =  "ibus";
+		XMODIFIERS =    "@im=ibus";
 
 		# Clean up $HOME (XDG Compliance settings)
 		XDG_RUNTIME_DIR = "/run/user/1000";
