@@ -2,7 +2,6 @@
 
 NIX_CONFIG="/etc/nixos/configuration.nix"
 HOMEMAN_CONFIG="$XDG_CONFIG_HOME/nixpkgs/home.nix"
-MAIL_CONFIG="$XDG_CONFIG_HOME/nixpkgs/mail.nix"
 
 # Create symlinks of my configurations if they don't exist
 if [ -z "$(ls -A $NIX_CONFIG)" ]; then
@@ -12,8 +11,4 @@ fi
 if [ -z "$(ls -A $HOMEMAN_CONFIG)" ]; then
 	echo "Home-manager configuration successfully installed"
 	ln -sf $PWD/home.nix $HOMEMAN_CONFIG
-fi
-if [ -z "$(ls -A $MAIL_CONFIG)" ]; then
-	echo "Mail configuration successfully installed"
-	ln -sf $PWD/mail.nix $MAIL_CONFIG
 fi
