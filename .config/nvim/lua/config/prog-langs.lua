@@ -1,8 +1,8 @@
 -- List of languages to enable programming plugins
 -- I use it to enable lazy load, so NeoVim starts fastly
 Prog_langs = {
-	"sh", "c", "cpp", "lua", "python", "javascript", "html",
-	"css", "sass", "scss", "plaintex", "tex", "markdown",
+	"config", "sh", "zsh", "c", "cpp", "lua", "python", "javascript",
+	"html", "css", "sass", "scss", "plaintex", "tex", "markdown",
 	"json", "php", "nix", "make", "dockerfile", "toml"
 }
 

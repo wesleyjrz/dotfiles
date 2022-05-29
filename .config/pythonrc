@@ -1,3 +1,15 @@
+# vim: filetype=python
+#
+#  Wesley Vieira S. Jr.
+#
+#    ,= ,-_-. =.
+#   ((_/)o o(\_))
+#    `-'(. .)`-'
+#        \_/
+#
+#  github.com/wesleyjrz
+#  gitlab.com/wesleyjrz
+
 import atexit
 import os
 import readline
