@@ -81,9 +81,12 @@
 	### X window system
 	services.xserver = {
 		enable = true;
-		displayManager.startx.enable = true;
 		layout = "br";
 		xkbOptions = "ctrl:nocaps";
+		displayManager = {
+			startx.enable = true;
+			defaultSession = "none+i3";
+		};
 		windowManager = {
 			i3.package = pkgs.i3-gaps;
 			i3.enable = true;
