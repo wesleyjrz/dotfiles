@@ -166,7 +166,7 @@ return require("packer").startup(function(use)
 		"norcalli/nvim-colorizer.lua",
 		opt = true,
 		ft = Prog_langs,
-		config = function () require("colorizer").setup() end
+		config = get_config("colour")
 	}
 
 	-- Nord theme
