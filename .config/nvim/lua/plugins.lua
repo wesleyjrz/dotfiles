@@ -81,6 +81,36 @@ return require("packer").startup(function(use)
 		config = get_config("lsp")
 	}
 
+	-- Completion engine
+	use {
+		"hrsh7th/nvim-cmp",
+		requires = {
+			-- LSP autocompletion
+			{ "hrsh7th/cmp-nvim-lsp", opt = true, ft = Prog_langs },
+
+			-- Path autocompletion
+			{ "hrsh7th/cmp-path", opt = true, ft = Prog_langs },
+
+			-- Neovim Lua autocompletion
+			{ "hrsh7th/cmp-nvim-lua", opt = true, ft = "lua" },
+
+			-- Buffer words autocompletion
+			"hrsh7th/cmp-buffer",
+
+			-- VSC-like pictograms
+			"onsails/lspkind.nvim"
+		},
+		config = get_config("completion")
+	}
+
+	-- Lua Snippets
+	use {
+		"L3MON4D3/LuaSnip",
+		opt = true,
+		ft = Prog_langs,
+		requires = { "saadparwaiz1/cmp_luasnip", opt = true, ft = Prog_langs },
+	}
+
 	-- Markdown preview
 	use {
 		"davidgranstrom/nvim-markdown-preview",
