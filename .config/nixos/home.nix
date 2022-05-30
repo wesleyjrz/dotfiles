@@ -51,10 +51,10 @@ in
 			rclone      # Mount clouds locally
 			pipe-viewer # Watch youtube videos
 			scrcpy      # Display and control Android devices
-			cmatrix
-			monero-gui
-			pandoc
 			tex
+			pandoc
+			monero-gui
+			cmatrix
 			# taisei
 
 			### Retroarch emulator

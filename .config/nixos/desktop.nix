@@ -35,7 +35,7 @@ in
 		maim                        # Take screenshots
 		pulsemixer                  # Audio mixing system
 		unclutter-xfixes            # Hide cursor
-		# libnotify                  # Send notifications
+		# libnotify                   # Send notifications
 
 		### Main programs
 		termite       # Terminal emulator
@@ -57,10 +57,9 @@ in
 		ungoogled-chromium
 
 		### Archivers
-		zip
-		unzip
-		_7zz
-		# unrar
+		zip unzip # zip files
+		_7zz      # 7zip files
+		# unrar     # rar files
 
 		### Themes and customisation
 		nordic

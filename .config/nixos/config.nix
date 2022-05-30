@@ -29,11 +29,17 @@
 	networking = {
 		hostName = "nixos";
 		wireless.enable = true;
-		# The global useDHCP flag is deprecated, therefore explicitly set to false here.
-		# Per-interface useDHCP will be mandatory in the future, so this generated config
-		# replicates the default behaviour.
-		useDHCP = false;
-		interfaces.enp2s0.useDHCP = true;
+
+		usePredictableInterfaceNames = false;
+		interfaces.eth0 = {
+			useDHCP = true;
+			ipv4.addresses = [{
+				address = "192.168.0.100";
+				prefixLength = 24;
+			}];
+		};
+		defaultGateway = "192.168.0.1";
+		nameservers = [ "1.1.1.1" "1.0.0.1" ];
 
 		# Firewall
 		firewall = {
