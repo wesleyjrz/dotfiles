@@ -65,6 +65,7 @@
 
 		### Web Development
 		sass
+		hugo
 		nodePackages.live-server
 
 		### JavaScript
