@@ -2,7 +2,7 @@
 -- I use it to enable lazy load, so NeoVim starts fastly
 Prog_langs = {
 	"config", "sh", "zsh", "c", "cpp", "lua", "python", "javascript",
-	"html", "css", "sass", "scss", "plaintex", "tex", "markdown",
+	"html", "css", "sass", "scss", "plaintex", "tex", "st", "markdown",
 	"json", "php", "nix", "make", "dockerfile", "toml"
 }
 
