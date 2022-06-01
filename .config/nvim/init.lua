@@ -9,3 +9,6 @@ require("commands")
 
 -- Plugin management
 require("plugins")
+
+-- Abbreviations
+require("abbreviations")

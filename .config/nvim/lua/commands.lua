@@ -121,7 +121,7 @@ autocmd("BufWinEnter", {
 	group = editor_automation
 })
 autocmd("BufWinLeave", {
-	command = [[ mkview ]],
+	command = [[ silent! mkview ]],
 	group = editor_automation
 })
 
