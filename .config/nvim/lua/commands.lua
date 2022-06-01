@@ -82,10 +82,11 @@ autocmd("User Run", {
 })
 
 -- LaTeX
+-- TODO: Make it handle "live editing" and export errors
 autocmd("User Run", {
 	pattern = "*.tex",
 	-- Convert tex to pdf and send a SIGHUP signal to mupdf (to update changes)
-	command = [[ silent !pdflatex % -o %.pdf && pkill --signal SIGHUP mupdf ]],
+	command = [[ echo "\"%.pdf\" PDF exported! This doesn't handle errors yet." | silent !pdflatex % -o %.pdf && pkill --signal SIGHUP mupdf ]],
 	group = code_runner
 })
 
