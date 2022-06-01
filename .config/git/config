@@ -38,7 +38,6 @@
 	# NOTE: these repositories was added automatically by `zsh snap`
 	repo = /home/wesleyjrz/.config/zsh/plugins/geometry
 	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-autopair
-	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-autosuggestions
 	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-snap
 	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-syntax-highlighting
 	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-z

@@ -53,5 +53,4 @@ znap prompt geometry-zsh/geometry
 
 znap source agkozak/zsh-z                     # easy navigation with `z`
 znap source hlissner/zsh-autopair             # auto-close matching delimiters
-znap source zsh-users/zsh-autosuggestions     # fish-like auto suggestions
 znap source zsh-users/zsh-syntax-highlighting # fish-like syntax highlighting (must be at the end)
