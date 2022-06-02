@@ -86,7 +86,7 @@ autocmd("User Run", {
 autocmd("User Run", {
 	pattern = "*.tex",
 	-- Convert tex to pdf and send a SIGHUP signal to mupdf (to update changes)
-	command = [[ echo "\"%.pdf\" PDF exported! This doesn't handle errors yet." | silent !pdflatex % -o %.pdf && pkill --signal SIGHUP mupdf ]],
+	command = [[ echo "PDF exported! This doesn't handle errors yet." | silent !pdflatex % -o %.pdf && pkill --signal SIGHUP mupdf ]],
 	group = code_runner
 })
 
