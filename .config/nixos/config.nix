@@ -159,19 +159,21 @@
 		# Clean up $HOME (XDG Compliance settings)
 		XDG_RUNTIME_DIR = "/run/user/1000";
 		XDG_CACHE_HOME  = "\${HOME}/.local/cache";
+		XDG_STATE_HOME  = "\${HOME}/.local/state";
 		XDG_CONFIG_HOME = "\${HOME}/.config";
 		XDG_BIN_HOME    = "\${HOME}/.local/bin";
 		XDG_DATA_HOME   = "\${HOME}/.local/share";
 		XAUTHORITY      = "\${XDG_RUNTIME_DIR}/Xauthority";
 		# NOTE: I could use XDG variables to simplify the configuration
-		# below, but for some reason these variables are giving wrong paths
+		# below, but for some reason those are giving wrong paths.
 		# Example: $XDG_HOME_CONFIG returns "/.config" instead of "/home/wesleyjrz/.config"
 		ZDOTDIR         = "\${HOME}/.config/zsh";
-		HISTFILE        = "\${HOME}/.local/cache/zsh_history";
+		HISTFILE        = "\${HOME}/.local/cache/zsh-hist";
 		ZSHZ_DATA       = "\${HOME}/.local/cache/zshz";
 		XINITRC         = "\${HOME}/.config/X11/xinitrc";
 		GTK_RC_FILES    = "\${HOME}/.config/gtk-1.0/gtkrc";
 		GTK2_RC_FILES   = "\${HOME}/.config/gtk-2.0/gtkrc";
+		ANDROID_HOME    = "\${HOME}/.local/share/android";
 		# WGETRC        = "\${HOME}/.config/wgetrc";
 	};
 
