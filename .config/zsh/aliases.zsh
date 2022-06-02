@@ -88,8 +88,7 @@ alias bat="bat --tabs 2"
 
 ### todo ###
 
-# Find and print all my `todo.txt` files and print them in order from "A" to "D"
-alias todo="find $HOME -name "todo.txt" -type f -exec cat {} + | grep '(A)' ; find $HOME -name "todo.txt" -type f -exec cat {} + | grep '(B)' ; find $HOME -name "todo.txt" -type f -exec cat {} + | grep '(C)' ; find $HOME -name "todo.txt" -type f -exec cat {} + | grep '(D)'"
+alias td="todo.sh -d $XDG_CONFIG_HOME/todo/config"
 
 ### Print object files assembly ###
 
