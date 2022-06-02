@@ -32,7 +32,7 @@ autocmd("User Run", {
 -- Clean remaining executables (C and C++ binaries)
 autocmd("BufUnload", {
 	pattern = { "*.c", "*.C", "*.cc", "*.cp", "*.cpp", "*.cxx", "*.c++" },
-	command = [[ silent !rm --force a.out ]],
+	command = [[ silent !rm --force %:p:h/a.out ]],
 	group = clean_remaining
 })
 
@@ -93,7 +93,7 @@ autocmd("User Run", {
 -- Clean log and aux files (LaTeX remaining files)
 autocmd("BufUnload", {
 	pattern = "*.tex",
-	command = [[ silent !rm --force %:p:h/*.log %:p:h/*.aux ]],
+	command = [[ silent !rm --force %:p:h/*.log %:p:h/*.aux %:p:h/*.out ]],
 	group = clean_remaining
 })
 
