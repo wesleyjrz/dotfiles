@@ -56,11 +56,6 @@ alias yta-opus="youtube-dl --extract-audio --audio-format opus"
 alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis"
 alias yta-wav="youtube-dl --extract-audio --audio-format wav"
 
-### pipe-viewer ###
-
-# Start pipe-viewer with my preferred settings
-alias yt="pipe-viewer"
-
 ### scrcpy ###
 
 # Start scrcpy with my preferred settings

@@ -36,8 +36,8 @@
 		docker
 		gnumake
 		gtk4
-		entr
-		file
+		entr # run arbitrary commands when files change
+		file # determine file type
 		binutils
 		unixtools.xxd
 

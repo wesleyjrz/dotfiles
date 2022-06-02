@@ -10,22 +10,6 @@
 
 { pkgs, config, ... }:
 
-let
-
-	tex = (pkgs.texlive.combine {
-		inherit (pkgs.texlive) scheme-small
-		amsfonts                     # math symbols
-		amsmath                      # math notations
-		fontspec                     # for loading fonts
-		xunicode xltxtra url parskip # formatting
-		xcolor                       # custom colours
-		layaureo                     # margin formatting
-		hyperref                     # adding and customising links
-		titlesec;                    # customise \section
-	});
-
-in
-
 {
 	### Import extra configurations (development packages, desktop environment...)
 	imports = [
@@ -49,9 +33,8 @@ in
 			fzf
 			neofetch    # Show basic system information
 			rclone      # Mount clouds locally
-			pipe-viewer # Watch youtube videos
 			scrcpy      # Display and control Android devices
-			tex
+			texlive.combined.scheme-full
 			pandoc
 			monero-gui
 			cmatrix
