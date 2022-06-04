@@ -139,7 +139,7 @@
 	environment.sessionVariables = rec {
 		# Default programs
 		EDITOR   = "nvim";
-		TERMINAL = "termite";
+		TERMINAL = "tym";
 		BROWSER  = "librewolf";
 
 		# Extra settings

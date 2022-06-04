@@ -1,3 +1,15 @@
+--[[
+   Wesley Vieira S. Jr.
+
+       ,= ,-_-. =.
+      ((_/)o o(\_))
+       `-'(. .)`-'
+           \_/
+
+   github.com/wesleyjrz
+   gitlab.com/wesleyjrz
+--]]
+
 local fn = vim.fn
 local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
 

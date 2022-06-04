@@ -1,3 +1,15 @@
+--[[
+   Wesley Vieira S. Jr.
+
+       ,= ,-_-. =.
+      ((_/)o o(\_))
+       `-'(. .)`-'
+           \_/
+
+   github.com/wesleyjrz
+   gitlab.com/wesleyjrz
+--]]
+
 local o = vim.opt
 local wo = vim.wo
 local fn = vim.fn

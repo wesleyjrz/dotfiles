@@ -1,3 +1,15 @@
+--[[
+   Wesley Vieira S. Jr.
+
+       ,= ,-_-. =.
+      ((_/)o o(\_))
+       `-'(. .)`-'
+           \_/
+
+   github.com/wesleyjrz
+   gitlab.com/wesleyjrz
+--]]
+
 local key = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
