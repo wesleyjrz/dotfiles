@@ -18,8 +18,10 @@ local tym = require("tym")
 -- General --
 -------------
 
-tym.set("font", "JetBrains Mono Nerd Font 11")
 tym.set_config {
+	-- Font
+	font = "JetBrains Mono Nerd Font 11",
+
 	-- Cursor
 	cursor_shape = "block",
 	cursor_blink_mode = "on",
@@ -28,4 +30,27 @@ tym.set_config {
 	scrollback_length = 10240,
 	silent = true,
 	autohide = false, -- auto-hide mouse when type
+}
+
+-------------
+-- Keymaps --
+-------------
+
+tym.set_keymaps {
+	-- Increase / Decrease font size
+	["<Ctrl><Shift>l"] = function ()
+		local current_size = tym.get("scale")
+		tym.set("scale", current_size + 10)
+		tym.apply()
+	end,
+	["<Ctrl><Shift>h"] = function ()
+		local current_size = tym.get("scale")
+		tym.set("scale", current_size - 10)
+		tym.apply()
+	end,
+	["<Ctrl><Shift>g"] = function ()
+		local default_size = 100
+		tym.set("scale", default_size)
+		tym.apply()
+	end
 }
