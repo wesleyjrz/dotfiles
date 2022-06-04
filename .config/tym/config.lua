@@ -38,17 +38,17 @@ tym.set_config {
 
 tym.set_keymaps {
 	-- Increase / Decrease font size
-	["<Ctrl><Shift>l"] = function ()
+	["<Ctrl><Shift>k"] = function ()
 		local current_size = tym.get("scale")
 		tym.set("scale", current_size + 10)
 		tym.apply()
 	end,
-	["<Ctrl><Shift>h"] = function ()
+	["<Ctrl><Shift>j"] = function ()
 		local current_size = tym.get("scale")
 		tym.set("scale", current_size - 10)
 		tym.apply()
 	end,
-	["<Ctrl><Shift>g"] = function ()
+	["<Ctrl><Shift>l"] = function ()
 		local default_size = 100
 		tym.set("scale", default_size)
 		tym.apply()
