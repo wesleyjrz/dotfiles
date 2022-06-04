@@ -41,6 +41,7 @@
 		jq   # JSON processor
 		binutils
 		unixtools.xxd
+		nix-prefetch-scripts
 
 		### Assembly
 		nasm
