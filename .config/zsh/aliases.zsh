@@ -117,17 +117,6 @@ alias cc="gcc -ansi -pedantic -Wall -Wextra"
 
 alias csh="tcsh"
 
-### python ###
-
-alias py="python2"
-alias py3="python3"
-alias pp="pypy3"
-
-# pip
-alias pypip="python2 -mpip"
-alias py3pip="python3 -mpip"
-alias pppip="pypy3 -mpip"
-
 ### w3m ###
 
 alias w3m="w3m -v -no-cookie -o display_image=false -o use_history=false"

@@ -53,7 +53,7 @@
 		ccls # LSP
 
 		### Python
-		python37Full python2Full pypy3
+		python37Full python2Full pypy37 pypy
 		nodePackages.pyright # LSP
 
 		### Lua
