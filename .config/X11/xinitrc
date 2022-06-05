@@ -20,6 +20,6 @@ picom -Cb --config $HOME/.config/picom/picom.conf &                 # Compositor
 greenclip daemon &                                                  # Clipboard manager
 unclutter --timeout 30 --fork &                                     # Cursor auto-hider
 # xss-lock --transfer-sleep-lock -- i3lock-fancy-rapid 2 4 --nofork & # Screen locker
-redshift &                                                          # Redshift (Blue light filter)
+# redshift &                                                          # Redshift (Blue light filter)
 ibus-daemon -drx                                                    # Ibus
 exec i3                                                             # Window Manager
