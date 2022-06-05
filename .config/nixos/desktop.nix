@@ -29,7 +29,7 @@ in
 		polybarFull                 # Status bar
 		rofi                        # dmenu replacement
 		redshift                    # Blue light filter
-		xss-lock i3lock-fancy-rapid # Screen locker
+		# xss-lock i3lock-fancy-rapid # Screen locker
 		haskellPackages.greenclip   # Clipboard manager
 		xclip                       # Access X selections (clipboard) from the command line
 		maim                        # Take screenshots

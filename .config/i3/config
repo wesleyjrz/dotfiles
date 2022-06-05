@@ -15,7 +15,7 @@ include $XDG_CONFIG_HOME/i3/*.conf
 
 # Variables
 set $LAUNCHER rofi -show drun -theme $XDG_CONFIG_HOME/rofi/themes/nord/nord.rasi
-set $CLIPBOARD exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -theme $XDG_CONFIG_HOME/rofi/themes/nord/nord.rasi -run-command '{cmd}'
+set $CLIPBOARD rofi -modi "clipboard:greenclip print" -show clipboard -theme $XDG_CONFIG_HOME/rofi/themes/nord/nord.rasi -run-command '{cmd}'
 set $FILES ranger
 set $STARTUP_SOUND $HOME/Music/win95-startup.wav
 
