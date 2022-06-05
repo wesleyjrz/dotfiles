@@ -41,7 +41,7 @@ return require("packer").startup(function(use)
 	use {
 		"nvim-treesitter/nvim-treesitter",
 		opt = true,
-		ft = Prog_langs,
+		ft = ProgLangs,
 		run = ":TSUpdate",
 		config = get_config("treesitter")
 	}
@@ -50,7 +50,7 @@ return require("packer").startup(function(use)
 	use {
 		"windwp/nvim-autopairs",
 		opt = true,
-		ft = Prog_langs,
+		ft = ProgLangs,
 		requires = "nvim-treesitter/nvim-treesitter",
 		config = get_config("autopairs")
 	}
@@ -67,7 +67,7 @@ return require("packer").startup(function(use)
 	use {
 		"p00f/nvim-ts-rainbow",
 		opt = true,
-		ft = Prog_langs,
+		ft = ProgLangs,
 		requires = "nvim-treesitter/nvim-treesitter"
 	}
 
@@ -75,7 +75,7 @@ return require("packer").startup(function(use)
 	use {
 		"numToStr/Comment.nvim",
 		opt = true,
-		ft = Prog_langs,
+		ft = ProgLangs,
 		requires = "nvim-treesitter/nvim-treesitter",
 		config = get_config("comment")
 	}
@@ -89,7 +89,7 @@ return require("packer").startup(function(use)
 		"neovim/nvim-lspconfig",
 		opt = true,
 		-- NOTE: I don't have a LSP for every language in my list
-		ft = Prog_langs,
+		ft = ProgLangs,
 		config = get_config("lsp")
 	}
 
@@ -98,10 +98,10 @@ return require("packer").startup(function(use)
 		"hrsh7th/nvim-cmp",
 		requires = {
 			-- LSP autocompletion
-			{ "hrsh7th/cmp-nvim-lsp", opt = true, ft = Prog_langs },
+			{ "hrsh7th/cmp-nvim-lsp", opt = true, ft = ProgLangs },
 
 			-- Path autocompletion
-			{ "hrsh7th/cmp-path", opt = true, ft = Prog_langs },
+			{ "hrsh7th/cmp-path", opt = true, ft = ProgLangs },
 
 			-- Neovim Lua autocompletion
 			{ "hrsh7th/cmp-nvim-lua", opt = true, ft = "lua" },
@@ -119,8 +119,8 @@ return require("packer").startup(function(use)
 	use {
 		"L3MON4D3/LuaSnip",
 		opt = true,
-		ft = Prog_langs,
-		requires = { "saadparwaiz1/cmp_luasnip", opt = true, ft = Prog_langs },
+		ft = ProgLangs,
+		requires = { "saadparwaiz1/cmp_luasnip", opt = true, ft = ProgLangs },
 	}
 
 	-- Markdown preview
@@ -146,7 +146,7 @@ return require("packer").startup(function(use)
 	use {
 		"ellisonleao/carbon-now.nvim",
 		opt = true,
-		ft = Prog_langs,
+		ft = ProgLangs,
 		config = get_config("carbon")
 	}
 
@@ -177,7 +177,7 @@ return require("packer").startup(function(use)
 	use {
 		"norcalli/nvim-colorizer.lua",
 		opt = true,
-		ft = Prog_langs,
+		ft = ProgLangs,
 		config = get_config("colour")
 	}
 
