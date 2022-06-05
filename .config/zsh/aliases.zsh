@@ -59,7 +59,7 @@ alias yta-wav="youtube-dl --extract-audio --audio-format wav"
 ### scrcpy ###
 
 # Start scrcpy with my preferred settings
-alias scr="scrcpy --turn-screen-off --stay-awake --show-touches --disable-screensaver -b4M -m1280"
+alias scr="scrcpy --turn-screen-off --stay-awake --show-touches --disable-screensaver -b16M -m1600"
 
 ### wget ###
 

@@ -112,6 +112,9 @@
 	# accept two definitions of the same service
 	services.xserver.libinput.enable = false;
 
+	# Control backlight
+	programs.light.enable = false;
+
 	services = {
 		# Enable CUPS to print documents
 		printing.enable = false;
