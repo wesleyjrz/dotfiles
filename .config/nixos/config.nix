@@ -75,6 +75,7 @@
 			"wheel"          # enable `sudo` for the user
 			"audio"          # enable to use audio devices
 			"networkmanager" # enable to change network settings
+			"adbusers"       # enable adb
 		];
 	};
 
@@ -132,8 +133,11 @@
 	#		};
 	# };
 
-	# Enable docker daemon
+	### Enable docker daemon
 	virtualisation.docker.enable = true;
+
+	### Enable adb
+	programs.adb.enable = true;
 
 	### Environment variables
 	environment.sessionVariables = rec {
