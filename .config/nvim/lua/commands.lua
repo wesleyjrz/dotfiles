@@ -105,7 +105,8 @@ autocmd("User Run", {
 -- Clean log and aux files (LaTeX remaining files)
 autocmd("BufUnload", {
 	pattern = "*.tex",
-	command = [[ silent !rm --force %:p:h/*.log %:p:h/*.aux %:p:h/*.out ]],
+	command = [[ silent !rm --force %:p:h/*.log %:p:h/*.aux &&
+	             rm --force %:p:h/*.out ]],
 	group = clean_remaining
 })
 
