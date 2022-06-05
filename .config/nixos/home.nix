@@ -37,6 +37,7 @@
 			rclone   # mount clouds locally
 			scrcpy   # display and control Android devices
 			texlive.combined.scheme-full
+			dmidecode
 			pandoc
 			monero-gui
 			cmatrix
