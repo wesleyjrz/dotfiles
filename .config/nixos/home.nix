@@ -31,10 +31,11 @@
 			curl
 			wget
 			fzf
+			kjv
 			todo-txt-cli
-			neofetch # Show basic system information
-			rclone   # Mount clouds locally
-			scrcpy   # Display and control Android devices
+			neofetch # show basic system information
+			rclone   # mount clouds locally
+			scrcpy   # display and control Android devices
 			texlive.combined.scheme-full
 			pandoc
 			monero-gui
