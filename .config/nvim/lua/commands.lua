@@ -138,12 +138,6 @@ autocmd("BufWinLeave", {
 	group = editor_automation
 })
 
--- Don't auto comment new lines (when open command is used)
-autocmd("BufEnter", {
-	command = [[ set formatoptions-=o ]],
-	group = editor_automation
-})
-
 -- Packer
 autocmd("BufWritePost", {
 	-- Regenerate compiled loader file and load Packer everytime "plugins.lua"
@@ -153,8 +147,14 @@ autocmd("BufWritePost", {
 	group = editor_automation
 })
 
--- Toggle auto-formatting with nice defaults
-usercmd("EnableFo", [[ set formatoptions=aw2tnp |
+-- Default autoformat options (See fo-table for more info)
+autocmd("BufEnter", {
+	command = [[ set formatoptions=cran2pj | set textwidth=80 ]],
+	group = editor_automation
+})
+
+-- Toggle text auto-formatting
+usercmd("EnableFo", [[ set formatoptions+=t |
                        echo "Autoformat is on, set a line length with \"set textwidth=[number]\" or disable it by entering \"DisableFo\" in the command line" ]], {})
-usercmd("DisableFo", [[ set formatoptions= |
+usercmd("DisableFo", [[ set formatoptions-=t |
                         echo "Autoformat is off" ]], {})
