@@ -147,14 +147,14 @@ autocmd("BufWritePost", {
 	group = editor_automation
 })
 
--- Default autoformat options (See fo-table for more info)
-autocmd("BufEnter", {
-	command = [[ set formatoptions=cran2pj | set textwidth=80 ]],
+-- Disable autoformatting in some files
+autocmd("FileType gitcommit", {
+	command = [[ setlocal formatoptions= ]],
 	group = editor_automation
 })
 
--- Toggle text auto-formatting
+-- Toggle text autoformatting
 usercmd("EnableFo", [[ set formatoptions+=t |
-                       echo "Autoformat is on, set a line length with \"set textwidth=[number]\" or disable it by entering \"DisableFo\" in the command line" ]], {})
+                       echo "Text autoformatting is on, set a line length with \"set textwidth=[number]\" or disable it by entering \"DisableFo\" in the command line" ]], {})
 usercmd("DisableFo", [[ set formatoptions-=t |
-                        echo "Autoformat is off" ]], {})
+                        echo "Text autoformatting is off" ]], {})
