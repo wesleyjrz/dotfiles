@@ -1,9 +1,23 @@
+#  Wesley Vieira S. Jr.
+#
+#    ,= ,-_-. =.
+#   ((_/)o o(\_))
+#    `-'(. .)`-'
+#        \_/
+#
+#  github.com/wesleyjrz
+#  gitlab.com/wesleyjrz
+
 { pkgs, config, ... }:
 
 {
 	system.stateVersion = "21.11";
 
 	imports = [
+		# Add home-manager module
+		<home-manager/nixos>
+		/etc/nixos/home.nix
+
 		# Include the results of the hardware scan
 		/etc/nixos/hardware-configuration.nix
 	];

@@ -13,17 +13,14 @@
 {
 	### Import extra configurations (development packages, desktop environment...)
 	imports = [
-		~/.config/nixos/desktop.nix
-		~/.config/nixos/development.nix
+		/etc/nixos/desktop.nix
+		/etc/nixos/development.nix
 	];
 
 	### Allow non-free software
 	nixpkgs.config.allowUnfree = false;
 
-	home = {
-		### Configuration
-		username = "wesleyjrz";
-		homeDirectory = "/home/wesleyjrz";
+	home-manager.users.wesleyjrz.home = {
 		stateVersion = "21.05";
 
 		### Packages
@@ -62,7 +59,7 @@
 	# newer versions of them yet, and I don't like to have a gigantic file
 	# with all configurations, even if it helps me storing them easier
 	# Nevertheless, some simple configurations like the `bat` one will be here
-	programs = {
+	 home-manager.users.wesleyjrz.programs = {
 		home-manager.enable = true;
 		bat = {
 			enable = true;

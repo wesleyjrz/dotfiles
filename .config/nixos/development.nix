@@ -28,7 +28,7 @@
 		];
 	};
 
-	home.packages = with pkgs; [
+	home-manager.users.wesleyjrz.home.packages = with pkgs; [
 		### Tools
 		git
 		git-lfs

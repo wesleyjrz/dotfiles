@@ -10,6 +10,8 @@
    gitlab.com/wesleyjrz
 --]]
 
+-- Here goes my installed plugins (Managed with packer)
+
 local fn = vim.fn
 local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
 

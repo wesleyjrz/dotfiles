@@ -1,19 +1,10 @@
 # Warning
 
-I've recently switched to NixOS and don't know a better way to store my nix
-dotfiles in the same directory, then for now I will keep these files here and
-use symlinks to its default directories.
+You have to symlink the files in this directory to `/etc/nixos`, please use the
+shell script I left or use the command below:
 
-If you're trying to use this configuration, I left a script named "link.sh" in
-this directory that does the boring work, though you can just use the commands
-below:
+`sudo ln -sf ~/.config/nixos/*.nix /etc/nixos`
 
-### NixOS configuration
+Also, to use home-manager as a NixOS module run the other script or the command below:
 
-`sudo ln -sf ~/.config/nixos/configuration.nix /etc/nixos`
-
-### Home-manager configuration
-
-`ln -sf ~/.config/nixos/home.nix ~/.config/nixpkgs`
-
-**NOTE:** You should use the last command for `email.nix` and other extra files.
+`sudo nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager && sudo nix-channel --update`

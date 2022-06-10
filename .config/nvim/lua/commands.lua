@@ -10,6 +10,8 @@
    gitlab.com/wesleyjrz
 --]]
 
+-- Here goes my autocommands and custom user commmands
+
 local key = vim.api.nvim_set_keymap
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup

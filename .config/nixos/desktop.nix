@@ -22,7 +22,7 @@ let
 in
 
 {
-	home.packages = with pkgs; [
+	home-manager.users.wesleyjrz.home.packages = with pkgs; [
 		### Core packages
 		picom                       # Compositor
 		nitrogen                    # Wallpaper Engine

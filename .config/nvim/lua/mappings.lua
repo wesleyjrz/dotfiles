@@ -10,6 +10,8 @@
    gitlab.com/wesleyjrz
 --]]
 
+-- Here goes my custom keymaps
+
 local key = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 

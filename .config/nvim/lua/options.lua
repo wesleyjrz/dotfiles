@@ -10,6 +10,8 @@
    gitlab.com/wesleyjrz
 --]]
 
+-- Here goes all my default options
+
 local o = vim.opt
 local wo = vim.wo
 local fn = vim.fn
