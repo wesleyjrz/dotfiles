@@ -35,6 +35,7 @@
 			scrcpy   # display and control Android devices
 			texlive.combined.scheme-full
 			dmidecode
+			minder
 			pandoc
 			monero-gui
 			cmatrix

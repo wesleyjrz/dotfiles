@@ -18,7 +18,6 @@ alias aliases="$EDITOR $XDG_CONFIG_HOME/zsh/aliases.zsh"
 
 ### NixOS ###
 
-alias home="home-manager"
 alias nix-gc="sudo nix-collect-garbage -d" # do a garbage collection (system-wide and user-specific)
 
 # List my system generations
