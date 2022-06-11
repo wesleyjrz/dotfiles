@@ -16,11 +16,9 @@
 	### Package overlays
 	nixpkgs = {
 		overlays = [
-			# Neovim Nightly overlay
-			(import (builtins.fetchTarball { url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz; }))
-			# Neovim Nightly vi/vim aliases
+			# Neovim vi/vim aliases
 			(self: super: {
-				neovim-nightly = super.neovim.override {
+				neovim = super.neovim.override {
 					viAlias = true;
 					vimAlias = true;
 				};
@@ -32,7 +30,7 @@
 		### Tools
 		git
 		git-lfs
-		neovim-nightly
+		neovim
 		docker
 		gnumake
 		gtk4
