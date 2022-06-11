@@ -12,15 +12,6 @@
 
 { pkgs, config, ... }:
 
-let
-
-	unstable = import
-		(builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/nixpkgs-unstable)
-		# Reuse the current configuration
-		{ config = config.nixpkgs.config; };
-
-in
-
 {
 	home-manager.users.wesleyjrz.home.packages = with pkgs; [
 		### Core packages
@@ -53,7 +44,7 @@ in
 
 		### Web Browsers
 		w3m
-		unstable.librewolf
+		librewolf
 		ungoogled-chromium
 
 		### Archivers

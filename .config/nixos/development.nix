@@ -39,6 +39,7 @@
 		entr # run arbitrary commands when files change
 		file # determine file type
 		jq   # JSON processor
+		gdb  # debugger
 		binutils
 		unixtools.xxd
 		nix-prefetch-scripts
