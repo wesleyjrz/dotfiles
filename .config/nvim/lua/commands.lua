@@ -33,41 +33,41 @@ local clean_remaining = augroup("CleanRemaining", { clear = false })
 -- C/C++
 autocmd("User Run", {
 	pattern = { "*.c" },
-	command = [[ !gcc -ansi -pedantic -Wall -Wextra % ; ./a.out ]],
+	command = [[ !gcc -ansi -pedantic -Wall -Wextra % -o %:p:r ; %:p:r ]],
 	group = code_runner
 })
 
 autocmd("User Run", {
 	pattern = { "*.C", "*.cc", "*.cp", "*.cpp", "*.cxx", "*.c++" },
-	command = [[ !g++ % ; ./a.out ]],
+	command = [[ !g++ % -o %:p:r ; %:p:r ]],
 	group = code_runner
 })
 
 -- Clean remaining executables (C and C++ binaries)
 autocmd("BufUnload", {
 	pattern = { "*.c", "*.C", "*.cc", "*.cp", "*.cpp", "*.cxx", "*.c++" },
-	command = [[ silent !rm --force %:p:h/a.out ]],
+	command = [[ silent !rm --force %:p:r ]],
 	group = clean_remaining
 })
 
 -- Shell Script
 autocmd("User Run", {
 	pattern = "*.sh",
-	command = [[ !/bin/sh  % ]],
+	command = [[ !/bin/sh %:p ]],
 	group = code_runner
 })
 
 -- Python
 autocmd("User Run", {
 	pattern = "*.py",
-	command = [[ !python3 % ]],
+	command = [[ !python3 %:p ]],
 	group = code_runner
 })
 
 -- Lua
 autocmd("User Run", {
 	pattern = "*.lua",
-	command = [[ !lua % ]],
+	command = [[ !lua %:p ]],
 	group = code_runner
 })
 
