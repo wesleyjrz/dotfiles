@@ -34,9 +34,8 @@ source $ZDOTDIR/aliases.zsh
 
 source $ZDOTDIR/functions/open.sh
 source $ZDOTDIR/functions/extract.sh
-source $ZDOTDIR/functions/gita.sh
+# source $ZDOTDIR/functions/gita.sh
 source $ZDOTDIR/functions/rclone.sh
-source $ZDOTDIR/functions/pomodoro.sh
 
 ### Bootstrap Zsh Snap ###
 
