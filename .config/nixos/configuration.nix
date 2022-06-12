@@ -164,18 +164,24 @@
 		BROWSER  = "librewolf";
 
 		# Extra settings
-		PYTHONSTARTUP          = "\${HOME}/.config/pythonrc";
-		RANGER_LOAD_DEFAULT_RC = "FALSE";
-		QT_QPA_PLATFORMTHEME   = "qt5ct";
-		ZSHZ_CMD               = "c";
-		ZSHZ_TILDE             = "1";
-		ZSHZ_TRAILING_SLASH    = "1";
-		FZF_DEFAULT_OPTS       = "--height 40% --border";
+		PYTHONSTARTUP               = "\${HOME}/.config/pythonrc";
+		RANGER_LOAD_DEFAULT_RC      = "FALSE";
+		QT_QPA_PLATFORMTHEME        = "qt5ct";
+		ZSHZ_CMD                    = "c";
+		ZSHZ_TILDE                  = "1";
+		ZSHZ_TRAILING_SLASH         = "1";
+		ZVM_VI_ESCAPE_BINDKEY       = "^G";
+		ZVM_INIT_MODE               = "sourcing";
+		ZVM_INSERT_MODE_CURSOR      = "\$ZVM_CURSOR_BLINKING_BLOCK";
+		ZVM_NORMAL_MODE_CURSOR      = "\$ZVM_CURSOR_BLINKING_BEAM";
+		ZVM_OPPEND_MODE_CURSOR      = "\$ZVM_CURSOR_BLINKING_UNDERLINE";
+		ZVM_VI_HIGHLIGHT_BACKGROUND = "blue";
+		FZF_DEFAULT_OPTS            = "--height 40% --border";
 
 		# Enable Ibus
 		GTK_IM_MODULE = "ibus";
-		QT_IM_MODULE =  "ibus";
-		XMODIFIERS =    "@im=ibus";
+		QT_IM_MODULE  = "ibus";
+		XMODIFIERS    = "@im=ibus";
 
 		# Clean up $HOME (XDG Compliance settings)
 		XDG_RUNTIME_DIR = "/run/user/1000";

@@ -19,8 +19,8 @@ zstyle ":completion:*" menu select
 
 ### Enable vi mode ###
 
-bindkey -v
-export KEYTIMEOUT=1 # faster change b/w modes
+# bindkey -v
+# export KEYTIMEOUT=1 # faster change b/w modes
 
 ### Default man pager ###
 
@@ -37,7 +37,7 @@ source $ZDOTDIR/functions/extract.sh
 # source $ZDOTDIR/functions/gita.sh
 source $ZDOTDIR/functions/rclone.sh
 
-### Bootstrap Zsh Snap ###
+### Bootstrap ZSH Snap ###
 
 [[ -f $ZDOTDIR/plugins/zsh-snap/znap.zsh ]] ||
     git clone --depth 1 -- \
@@ -50,6 +50,7 @@ znap prompt geometry-zsh/geometry
 
 ### Plugins ###
 
+znap source jeffreytse/zsh-vi-mode            # better vi mode
 znap source agkozak/zsh-z                     # easy navigation with `z`
 znap source hlissner/zsh-autopair             # auto-close matching delimiters
 znap source zsh-users/zsh-syntax-highlighting # fish-like syntax highlighting (must be at the end)

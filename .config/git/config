@@ -36,8 +36,9 @@
 
 [maintenance]
 	# NOTE: these repositories was added automatically by `zsh snap`
-	repo = /home/wesleyjrz/.config/zsh/plugins/geometry
-	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-autopair
 	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-snap
-	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-syntax-highlighting
+	repo = /home/wesleyjrz/.config/zsh/plugins/geometry
+	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-vi-mode
 	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-z
+	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-autopair
+	repo = /home/wesleyjrz/.config/zsh/plugins/zsh-syntax-highlighting
