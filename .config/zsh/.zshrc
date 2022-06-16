@@ -13,14 +13,13 @@
 export TERM=xterm-256color
 export COLORTERM=truecolor
 
-### Better completion menus ###
+### ZSH completion system ###
 
 zstyle ":completion:*" menu select
+zstyle ":completion:*" completer _complete _ignored _correct _approximate
+zstyle :compinstall filename "~/.config/zsh/.zshrc"
 
-### Enable vi mode ###
-
-# bindkey -v
-# export KEYTIMEOUT=1 # faster change b/w modes
+autoload -Uz compinit ; compinit
 
 ### Default man pager ###
 
