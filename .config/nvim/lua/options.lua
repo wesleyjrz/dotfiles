@@ -21,13 +21,12 @@ local fn = vim.fn
 ------------
 
 o.showmode = false       -- show current mode
-o.title = true           -- show current file name as window title
 o.showtabline = 0        -- when to show nvim tabline
 o.termguicolors = true   -- enables 24-bit RGB color
 o.cmdheight = 1          -- command line height
 o.pumheight = 10         -- max number of items to show in the popup menu
 wo.number = true         -- show line numbers
-wo.numberwidth = 4       -- number of columns to use for line number
+wo.numberwidth = 2       -- number of columns to use for line number
 wo.relativenumber = true -- show relative line numbers
 o.cursorline = true      -- highlight current line
 o.scrolloff = 8          -- scroll vertically easier
@@ -44,6 +43,7 @@ o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50" -- block in normal 
 -- Behaviour --
 ---------------
 
+-- Folding options
 local foldText = "getline(v:foldstart).' '"
 local foldExpr = "nvim_treesitter#foldexpr()"
 
@@ -63,7 +63,7 @@ o.splitright = true         -- force all vertical splits to open in the right of
 o.hidden = true             -- do not ask to save when switching buffers
 o.fileencoding = "utf-8"    -- default file encoding
 o.clipboard = "unnamedplus" -- allow nvim to access system clipboard (depends on xclip)
-o.updatecount = 100         -- after typing this many characters the swap file will be written
+o.updatecount = 20          -- after typing this many characters the swap file will be written
 o.updatetime = 300          -- if this many milliseconds nothing is typed, the swap file will be written
 o.swapfile = true           -- store the things you change in a swap file
 o.backup = false            -- make backups of the original file after edit it

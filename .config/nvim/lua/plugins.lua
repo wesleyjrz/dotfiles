@@ -156,7 +156,7 @@ return require("packer").startup(function(use)
 	use {
 		"folke/zen-mode.nvim",
 		config = get_config("zen")
-}
+	}
 
 	-- Statusline
 	use {
