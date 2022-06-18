@@ -147,10 +147,8 @@ interface = eth0
 interval = 3.0
 
 format-connected = "%{F#8FBCBB}<label-connected>%{F-}"
-format-disconnected = "%{F#BF616A}<label-disconnected>%{F-}"
 
 label-connected = "爵 Ethernet"
-label-disconnected = "睊 Disconnected"
 
 [module/wireless-network]
 type = internal/network
