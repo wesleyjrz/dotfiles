@@ -42,10 +42,20 @@
 	### Network
 	networking = {
 		hostName = "nixos";
-		wireless.enable = true;
+		networkmanager = {
+			enable = true;
+			wifi.backend = "iwd";
+		};
 
 		usePredictableInterfaceNames = false;
 		interfaces.eth0 = {
+			useDHCP = true;
+			ipv4.addresses = [{
+				address = "192.168.0.100";
+				prefixLength = 24;
+			}];
+		};
+		interfaces.wlan0 = {
 			useDHCP = true;
 			ipv4.addresses = [{
 				address = "192.168.0.100";
