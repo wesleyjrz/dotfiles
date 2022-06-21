@@ -37,9 +37,13 @@
 			dmidecode
 			minder
 			pandoc
-			monero-gui
 			cmatrix
 			# taisei
+
+			### Cryptocurrency
+			mycrypto
+			monero-gui
+			bisq-desktop
 
 			### Retroarch emulator
 			retroarchBare
