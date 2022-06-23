@@ -33,7 +33,7 @@ local clean_remaining = augroup("CleanRemaining", { clear = false })
 -- C/C++
 autocmd("User Run", {
 	pattern = { "*.c" },
-	command = [[ !gcc -ansi -pedantic -Wall -Wextra % -o %:p:r ; %:p:r ]],
+	command = [[ !gcc -ansi -pedantic -Wall -Wextra -Werror % -o %:p:r ; %:p:r ]],
 	group = code_runner
 })
 

@@ -107,8 +107,8 @@ alias up="ping -c 4 -i 1 archlinux.org ; echo '' && ping -c 4 -i 1 manjaro.org"
 ### gcc ###
 
 # My preferred flags to compile C code
-alias gcc="gcc -ansi -pedantic -Wall -Wextra"
-alias cc="gcc -ansi -pedantic -Wall -Wextra"
+alias gcc="gcc -ansi -pedantic -Wall -Wextra -Werror"
+alias cc="gcc -ansi -pedantic -Wall -Wextra -Werror"
 
 ### cshell ###
 
