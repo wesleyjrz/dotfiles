@@ -34,10 +34,10 @@
 		docker
 		gnumake
 		gtk4
-		entr # run arbitrary commands when files change
-		file # determine file type
-		jq   # JSON processor
-		gdb  # debugger
+		entr      # run arbitrary commands when files change
+		file      # determine file type
+		jq        # JSON processor
+		gdb cgdb  # debugger
 		binutils
 		unixtools.xxd
 		nix-prefetch-scripts

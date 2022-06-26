@@ -39,13 +39,12 @@
 		mpv-unwrapped # Video + Audio player + Image viewer
 		mupdf         # PDF viewer
 		htop-vim      # Process viewer
-		gimp          # Image edit
+		gimp          # Image editor
 		cpu-x         # System information
 
 		### Web Browsers
 		w3m
 		librewolf
-		ungoogled-chromium
 
 		### Archivers
 		zip unzip # zip files

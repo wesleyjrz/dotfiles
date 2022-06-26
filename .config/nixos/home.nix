@@ -28,8 +28,8 @@
 			curl
 			wget
 			fzf
-			kjv
 			todo-txt-cli
+			ncdu
 			neofetch # show basic system information
 			rclone   # mount clouds locally
 			scrcpy   # display and control Android devices
@@ -44,6 +44,7 @@
 			mycrypto
 			monero-gui
 			bisq-desktop
+			nodePackages.coinmon
 
 			### Retroarch emulator
 			retroarchBare
