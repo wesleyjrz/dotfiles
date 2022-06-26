@@ -120,19 +120,19 @@ date-alt = "%a, %d %b"
 type = internal/memory
 interval = 2
 
-label = "%{A3:termite -e htop:}%{F#8FBCBB} %percentage_used:2%%%{F-}%{A}"
+label = "%{A3:$TERMINAL -e htop:}%{F#8FBCBB} %percentage_used:2%%%{F-}%{A}"
 
 [module/cpu]
 type = internal/cpu
 interval = 2
 
-label = "%{A3:termite -e htop:}%{F#8FBCBB} %percentage:2%%%{F-}%{A}"
+label = "%{A3:$TERMINAL -e htop:}%{F#8FBCBB} %percentage:2%%%{F-}%{A}"
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = "%{A3:termite -e pulsemixer:}%{F#8FBCBB}<ramp-volume><label-volume>%%{F-}%{A}"
-format-muted = "%{A3:termite -e pulsemixer:}%{F#BF616A}<label-muted>%{F-}%{A}"
+format-volume = "%{A3:$TERMINAL -e pulsemixer:}%{F#8FBCBB}<ramp-volume><label-volume>%%{F-}%{A}"
+format-muted = "%{A3:$TERMINAL -e pulsemixer:}%{F#BF616A}<label-muted>%{F-}%{A}"
 
 label-volume = " %percentage:2%"
 label-muted = "婢 Mtd"
@@ -146,7 +146,7 @@ type = internal/network
 interface = eth0
 interval = 3.0
 
-format-connected = "%{F#8FBCBB}<label-connected>%{F-}"
+format-connected = "%{A3:$TERMINAL -e nmtui:}%{F#8FBCBB}<label-connected>%{F-}%{A}"
 
 label-connected = "爵 Ethernet"
 
@@ -155,8 +155,8 @@ type = internal/network
 interface = wlan0
 interval = 3.0
 
-format-connected = "%{A3:termite -e iwctl:}%{F#8FBCBB}<label-connected>%{F-}%{A}"
-format-disconnected = "%{A3:termite -e iwctl:}%{F#BF616A}<label-disconnected>%{F-}%{A}"
+format-connected = "%{A3:$TERMINAL -e nmtui:}%{F#8FBCBB}<label-connected>%{F-}%{A}"
+format-disconnected = "%{A3:$TERMINAL -e nmtui:}%{F#BF616A}<label-disconnected>%{F-}%{A}"
 
 label-connected = "直 %essid%"
 label-disconnected = "睊 Disconnected"
