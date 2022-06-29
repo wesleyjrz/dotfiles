@@ -16,7 +16,7 @@ include $XDG_CONFIG_HOME/i3/*.conf
 # Variables
 set $LAUNCHER rofi -show drun -theme $XDG_CONFIG_HOME/rofi/themes/nord/nord.rasi
 set $CLIPBOARD rofi -modi "clipboard:greenclip print" -show clipboard -theme $XDG_CONFIG_HOME/rofi/themes/nord/nord.rasi -run-command '{cmd}'
-set $FILES ranger
+set $FILES nnn
 set $STARTUP_SOUND $HOME/Music/win95-startup.wav
 
 # Workspaces
@@ -43,7 +43,7 @@ focus_follows_mouse no
 # Show popup windows in fullscreen
 popup_during_fullscreen smart
 
-# Auto back-and-forth (go back to last workspace using the same binding)
+# Auto back-and-forth (return to the last workspace when the same key is pressed twice)
 workspace_auto_back_and_forth yes
 
 # Enable floating mode for some windows

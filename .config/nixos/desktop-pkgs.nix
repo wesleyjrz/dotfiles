@@ -30,15 +30,14 @@
 
 		### Main programs
 		termite       # terminal emulator
-		ranger        # file manager
 		exa           # ls replacement
+		nnn           # file manager
 		trash-cli     # CLI trash
 		imagemagick   # create, modify and display bitmap images
 		imv           # image viewer
 		mpv-unwrapped # video + audio player + image viewer
 		mupdf         # PDF viewer
 		htop-vim      # process viewer
-		w3m
 		librewolf     # web browser
 		gimp          # image editor
 
