@@ -46,6 +46,8 @@
 		### C/C++
 		gcc cmake  # C and C++ compiler
 		gdb cgdb   # debugger
+		ncurses    # CRT screen handling and optimisation lib (build TUIs)
+		i3ipc-glib # interface library to i3wm
 		libstdcxx5 # C++ Standard Library
 		ccls       # LSP
 
