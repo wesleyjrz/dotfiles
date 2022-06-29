@@ -1,0 +1,16 @@
+# vim: filetype=config
+#
+#  Wesley Vieira S. Jr.
+#
+#    ,= ,-_-. =.
+#   ((_/)o o(\_))
+#    `-'(. .)`-'
+#        \_/
+#
+#  github.com/wesleyjrz
+#  gitlab.com/wesleyjrz
+
+--theme Nord
+--style plain
+--paging auto
+--italic-text never
