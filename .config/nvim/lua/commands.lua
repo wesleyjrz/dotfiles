@@ -149,14 +149,12 @@ autocmd("BufWritePost", {
 	group = editor_automation
 })
 
--- Disable autoformatting in these filetypes
-autocmd("FileType gitcommit", {
-	command = [[ setlocal formatoptions= ]],
-	group = editor_automation
-})
-
 -- Toggle text autoformatting
-usercmd("EnableAutoFormat", [[ set formatoptions+=t |
-                       echo "Text autoformatting is on, set a line length with \"set textwidth=[number]\" or disable it by entering \"DisableFo\" in the command line" ]], {})
-usercmd("DisableAutoFormat", [[ set formatoptions-=t |
+usercmd("EnableAutoFormat", [[ set formatoptions+=at |
+                       echo "Text autoformatting is on, set a line length with \"set textwidth=[number]\" or disable it by entering \"DisableAutoFormat\" in the command line" ]], {})
+usercmd("DisableAutoFormat", [[ set formatoptions-=at |
                         echo "Text autoformatting is off" ]], {})
+usercmd("EnableCommentAutoFormat", [[ set formatoptions+=ac |
+                       echo "Comment autoformatting is on, set a line length with \"set textwidth=[number]\" or disable it by entering \"DisableCommentAutoFormat\" in the command line" ]], {})
+usercmd("DisableCommentAutoFormat", [[ set formatoptions-=ac |
+                        echo "Comment autoformatting is off" ]], {})
