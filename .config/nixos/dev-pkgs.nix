@@ -52,7 +52,9 @@
 		ccls       # LSP
 
 		### Python
-		python37Full python2Full pypy37 pypy
+		python310
+		python310Packages.pip   # python package manager
+		python310Packages.i3ipc # interface library to i3wm
 		nodePackages.pyright    # LSP
 
 		### Lua
