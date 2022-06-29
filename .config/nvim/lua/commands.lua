@@ -149,14 +149,14 @@ autocmd("BufWritePost", {
 	group = editor_automation
 })
 
--- Disable autoformatting in some files
+-- Disable autoformatting in these filetypes
 autocmd("FileType gitcommit", {
 	command = [[ setlocal formatoptions= ]],
 	group = editor_automation
 })
 
 -- Toggle text autoformatting
-usercmd("EnableFo", [[ set formatoptions+=t |
+usercmd("EnableAutoFormat", [[ set formatoptions+=t |
                        echo "Text autoformatting is on, set a line length with \"set textwidth=[number]\" or disable it by entering \"DisableFo\" in the command line" ]], {})
-usercmd("DisableFo", [[ set formatoptions-=t |
+usercmd("DisableAutoFormat", [[ set formatoptions-=t |
                         echo "Text autoformatting is off" ]], {})
