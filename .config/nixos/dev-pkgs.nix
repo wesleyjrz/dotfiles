@@ -8,7 +8,7 @@
 #  github.com/wesleyjrz
 #  gitlab.com/wesleyjrz
 
-# Packages I use for development
+# Development packages
 
 { pkgs, config, ... }:
 
@@ -26,45 +26,43 @@
 		];
 	};
 
-	home-manager.users.wesleyjrz.home.packages = with pkgs; [
+	users.users.wesleyjrz.packages = with pkgs; [
 		### Tools
-		git
-		git-lfs
-		neovim
-		docker
-		gnumake
-		gtk4
-		entr      # run arbitrary commands when files change
-		file      # determine file type
-		jq        # JSON processor
-		gdb cgdb  # debugger
-		binutils
-		unixtools.xxd
 		nix-prefetch-scripts
+		git git-lfs
+		neovim
+		docker        # portable containers
+		gnumake       # generate executables and other non-source files easily
+		gtk4          # widget toolkit
+		entr          # run arbitrary commands when files change
+		file          # show file types
+		jq            # JSON processor
+		binutils      # set of tools for creating and managing binary programs
+		unixtools.xxd # hexdump
 
 		### Assembly
-		nasm
+		nasm # portable 80x86 assembler
 
 		### C/C++
-		gcc
-		cmake
+		gcc cmake  # C and C++ compiler
+		gdb cgdb   # debugger
 		libstdcxx5 # C++ Standard Library
-		ccls # LSP
+		ccls       # LSP
 
 		### Python
 		python37Full python2Full pypy37 pypy
-		nodePackages.pyright # LSP
+		nodePackages.pyright    # LSP
 
 		### Lua
 		lua
 		love
 		sumneko-lua-language-server # LSP
 
-		### Bash/Shell Script
+		### Shell script
 		nodePackages.bash-language-server
 		shellcheck
 
-		### Web Development
+		### Web
 		sass
 		hugo
 		nodePackages.live-server

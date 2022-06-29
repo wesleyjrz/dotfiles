@@ -13,10 +13,14 @@
 {
 	system.stateVersion = "21.11";
 
+	### Allow non-free software
+	nixpkgs.config.allowUnfree = false;
+
 	imports = [
-		# Add home-manager module
-		<home-manager/nixos>
-		/etc/nixos/home.nix
+		# Include packages
+		/etc/nixos/desktop-pkgs.nix
+		/etc/nixos/dev-pkgs.nix
+		/etc/nixos/other-pkgs.nix
 
 		# Include the results of the hardware scan
 		/etc/nixos/hardware-configuration.nix
