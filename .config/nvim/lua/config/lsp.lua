@@ -16,6 +16,9 @@ key("n", "<space>j", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
 -- Show a buffer with diagnostics (Space + d)
 key("n", "<space>d", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 
+-- Rename a variable
+key("n", "<space>cw", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+
 -------------------
 -- Configuration --
 -------------------
