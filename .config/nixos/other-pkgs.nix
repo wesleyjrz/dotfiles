@@ -15,6 +15,8 @@
 {
 	users.users.wesleyjrz.packages = with pkgs; [
 		### System tools
+		ed        # THE STANDARD TEXT EDITOR
+		bat       # cat with extra features
 		curl      # transfer data (from or to a server)
 		wget      # CLI downloader
 		fzf       # fuzzy finder
