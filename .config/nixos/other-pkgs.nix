@@ -34,7 +34,7 @@
 		### Cryptocurrency
 		mycrypto
 		monero-gui
-		bisq-desktop
+		# bisq-desktop
 		nodePackages.coinmon
 
 		### Retroarch

@@ -41,10 +41,8 @@ in
 		neovim
 		docker        # portable containers
 		gnumake       # generate executables and other non-source files easily
-		gtk4          # widget toolkit
 		entr          # run arbitrary commands when files change
 		file          # show file types
-		jq            # JSON processor
 		binutils      # set of tools for creating and managing binary programs
 		unixtools.xxd # hexdump
 
@@ -54,9 +52,6 @@ in
 		### C/C++
 		gcc cmake  # C and C++ compiler
 		gdb cgdb   # debugger
-		ncurses    # CRT screen handling and optimisation lib (build TUIs)
-		i3ipc-glib # interface library to i3wm
-		libstdcxx5 # C++ Standard Library
 		ccls       # LSP
 
 		### Python
