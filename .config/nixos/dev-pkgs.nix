@@ -12,6 +12,14 @@
 
 { pkgs, config, ... }:
 
+with pkgs;
+let
+	python-pkgs = python-packages: with python-packages; [
+		i3ipc
+	];
+	myPython = python310.withPackages python-pkgs;
+in
+
 {
 	### Package overlays
 	nixpkgs = {
@@ -52,9 +60,7 @@
 		ccls       # LSP
 
 		### Python
-		python310
-		python310Packages.pip   # python package manager
-		python310Packages.i3ipc # interface library to i3wm
+		myPython
 		nodePackages.pyright    # LSP
 
 		### Lua

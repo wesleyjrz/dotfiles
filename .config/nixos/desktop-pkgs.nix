@@ -31,7 +31,7 @@
 		### Main programs
 		termite       # terminal emulator
 		exa           # ls replacement
-		nnn           # file manager
+		ranger        # file manager
 		trash-cli     # CLI trash
 		imagemagick   # create, modify and display bitmap images
 		imv           # image viewer
