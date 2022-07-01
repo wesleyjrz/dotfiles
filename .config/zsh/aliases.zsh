@@ -110,14 +110,6 @@ alias up="ping -c 4 -i 1 archlinux.org ; echo '' && ping -c 4 -i 1 manjaro.org"
 alias gcc="gcc -ansi -pedantic -Wall -Wextra -Werror"
 alias cc="gcc -ansi -pedantic -Wall -Wextra -Werror"
 
-### cshell ###
-
-alias csh="tcsh"
-
-### w3m ###
-
-alias w3m="w3m -v -no-cookie -o display_image=false -o use_history=false"
-
 ### Docker ###
 
 # Use `sudo` with Docker by default
