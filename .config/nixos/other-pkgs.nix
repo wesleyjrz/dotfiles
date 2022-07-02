@@ -32,8 +32,9 @@
 		texlive.combined.scheme-full
 
 		### Cryptocurrency
-		mycrypto
 		monero-gui
+		mycrypto
+		electrum
 		# bisq-desktop
 		nodePackages.coinmon
 

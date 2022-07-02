@@ -25,6 +25,10 @@ autoload -Uz compinit ; compinit
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+### Enable nix-shell support
+
+any-nix-shell zsh --info-right | source /dev/stdin
+
 ### Import custom aliases ###
 
 source $ZDOTDIR/aliases.zsh

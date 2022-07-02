@@ -37,6 +37,7 @@ in
 	users.users.wesleyjrz.packages = with pkgs; [
 		### Tools
 		nix-prefetch-scripts
+		any-nix-shell
 		git git-lfs
 		neovim
 		docker        # portable containers
