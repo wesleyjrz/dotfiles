@@ -29,17 +29,17 @@
 		# libnotify                   # send notifications
 
 		### Main programs
-		termite       # terminal emulator
-		exa           # ls replacement
-		ranger        # file manager
-		trash-cli     # CLI trash
-		imagemagick   # create, modify and display bitmap images
-		imv           # image viewer
-		mpv-unwrapped # video + audio player + image viewer
-		mupdf         # PDF viewer
-		htop-vim      # process viewer
-		librewolf     # web browser
-		gimp          # image editor
+		termite         # terminal emulator
+		exa             # ls replacement
+		ranger ueberzug # file manager
+		trash-cli       # CLI trash
+		imagemagick     # create, modify and display bitmap images
+		imv             # image viewer
+		mpv-unwrapped   # video + audio player + image viewer
+		mupdf           # PDF viewer
+		htop-vim        # process viewer
+		librewolf       # web browser
+		gimp            # image editor
 
 		### Archivers
 		zip unzip # zip files
