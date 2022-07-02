@@ -150,11 +150,11 @@ autocmd("BufWritePost", {
 })
 
 -- Toggle text autoformatting
-usercmd("EnableAutoFormat", [[ set formatoptions+=at |
+usercmd("EnableAutoFormat", [[ setlocal formatoptions+=at |
                        echo "Text autoformatting is on, set a line length with \"set textwidth=[number]\" or disable it by entering \"DisableAutoFormat\" in the command line" ]], {})
-usercmd("DisableAutoFormat", [[ set formatoptions-=at |
+usercmd("DisableAutoFormat", [[ setlocal formatoptions-=at |
                         echo "Text autoformatting is off" ]], {})
-usercmd("EnableCommentAutoFormat", [[ set formatoptions+=ac |
+usercmd("EnableCommentAutoFormat", [[ setlocal formatoptions+=ac |
                        echo "Comment autoformatting is on, set a line length with \"set textwidth=[number]\" or disable it by entering \"DisableCommentAutoFormat\" in the command line" ]], {})
-usercmd("DisableCommentAutoFormat", [[ set formatoptions-=ac |
+usercmd("DisableCommentAutoFormat", [[ setlocal formatoptions-=ac |
                         echo "Comment autoformatting is off" ]], {})
