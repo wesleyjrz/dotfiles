@@ -88,12 +88,12 @@ autocmd("User Run", {
 	group = code_runner
 })
 
--- Markdown
-autocmd("User Run", {
-	pattern = "*.md",
-	command = [[ MarkdownPreview ]],
-	group = code_runner
-})
+-- Markdown (Disabled)
+-- autocmd("User Run", {
+-- 	pattern = "*.md",
+-- 	command = [[ MarkdownPreview ]],
+-- 	group = code_runner
+-- })
 
 -- LaTeX
 -- TODO: Make it handle "live editing" and export errors

@@ -10,22 +10,20 @@
    gitlab.com/wesleyjrz
 --]]
 
--- Here goes my installed plugins (Managed with packer)
-
-local fn = vim.fn
-local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
-
--- Load list of supported programming languages
+-- Supported programming languages list to enable development plugins
 require("config.prog-langs")
 
--- Returns require function in Packer "config" parameter
+-- Get configuration function
 local function get_config(name)
 	return string.format("require(\"config.%s\")", name)
 end
 
--------------------
--- Configuration --
--------------------
+---------------
+-- Bootstrap --
+---------------
+
+local fn = vim.fn
+local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
 
 if fn.empty(fn.glob(install_path)) > 0 then
 	Packer_bootstrap = fn.system({"git", "clone", "https://github.com/wbthomason/packer.nvim", install_path})
@@ -36,10 +34,10 @@ end
 -------------
 
 return require("packer").startup(function(use)
-	-- Let Packer manage itself
+	-- Packer (managed by itself)
 	use "wbthomason/packer.nvim"
 
-	-- Treesitter configuration and abstraction layer
+	-- Treesitter: incremental parsing of buffers
 	use {
 		"nvim-treesitter/nvim-treesitter",
 		opt = true,
@@ -48,7 +46,7 @@ return require("packer").startup(function(use)
 		config = get_config("treesitter")
 	}
 
-	-- Autopairs
+	-- Autopair: close pairs automatically
 	use {
 		"windwp/nvim-autopairs",
 		opt = true,
@@ -57,7 +55,7 @@ return require("packer").startup(function(use)
 		config = get_config("autopairs")
 	}
 
-	-- Autotag
+	-- Autotag: close tags automatically
 	use {
 		"windwp/nvim-ts-autotag",
 		opt = true,
@@ -65,7 +63,7 @@ return require("packer").startup(function(use)
 		requires = "nvim-treesitter/nvim-treesitter"
 	}
 
-	-- Rainbow brackets
+	-- Rainbow brackets: colourful brackets
 	use {
 		"p00f/nvim-ts-rainbow",
 		opt = true,
@@ -73,7 +71,7 @@ return require("packer").startup(function(use)
 		requires = "nvim-treesitter/nvim-treesitter"
 	}
 
-	-- Comment and uncomment easily
+	-- Comment: comment and uncomment easily
 	use {
 		"numToStr/Comment.nvim",
 		opt = true,
@@ -82,20 +80,68 @@ return require("packer").startup(function(use)
 		config = get_config("comment")
 	}
 
-	-- Automatically make missing directories when saving a file,
-	-- works like `mkdir -p` on Linux.
+	-- Terminal: toggle Neovim terminal window
+	use {
+		"s1n7ax/nvim-terminal",
+		config = get_config("terminal")
+	}
+
+	-- Stabilize: buffer content stabilizer
+	use {
+		"luukvbaal/stabilize.nvim",
+		config = function () require("stabilize").setup() end
+	}
+
+	-- Statusline
+	use {
+		"nvim-lualine/lualine.nvim",
+		requires = {
+			"kyazdani42/nvim-web-devicons",
+			"arkav/lualine-lsp-progress"
+		},
+		config = get_config("lualine")
+	}
+
+	-- Zen Mode: code without any distractions
+	use {
+		"folke/zen-mode.nvim",
+		config = get_config("zen")
+	}
+
+	-- Barbar: buffer tabs
+	use {
+		"romgrk/barbar.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = get_config("barbar")
+	}
+
+	-- Colorizer: highlight colour codes
+	use {
+		"norcalli/nvim-colorizer.lua",
+		opt = true,
+		ft = ProgLangs,
+		config = get_config("colour")
+	}
+
+	-- Nord: a superb theme
+	use {
+		"shaunsingh/nord.nvim",
+		config = get_config("nord")
+	}
+
+	-- mkdir: create missing directories when saving a file
 	use "jghauser/mkdir.nvim"
 
-	-- LSP config
+	-- LSP config: configure Neovim Language Server Protocols
 	use {
 		"neovim/nvim-lspconfig",
 		opt = true,
-		-- NOTE: I don't have a LSP for every language in my list
+		-- NOTE: I don't have a LSP installed for all languages on my list
 		ft = ProgLangs,
 		config = get_config("lsp")
 	}
 
-	-- Completion engine
+	-- nvim-cmp: completion engine
 	use {
 		"hrsh7th/nvim-cmp",
 		requires = {
@@ -117,7 +163,7 @@ return require("packer").startup(function(use)
 		config = get_config("completion")
 	}
 
-	-- Lua Snippets
+	-- LuaSnip: snippet engine
 	use {
 		"L3MON4D3/LuaSnip",
 		opt = true,
@@ -125,68 +171,12 @@ return require("packer").startup(function(use)
 		requires = { "saadparwaiz1/cmp_luasnip", opt = true, ft = ProgLangs },
 	}
 
-	-- Markdown preview
-	use {
-		"davidgranstrom/nvim-markdown-preview",
-		opt = true,
-		ft = "markdown"
-	}
-
-	-- Terminal toggler
-	use {
-		"s1n7ax/nvim-terminal",
-		config = get_config("terminal")
-	}
-
-	-- Content stabilizer
-	use {
-		"luukvbaal/stabilize.nvim",
-		config = function () require("stabilize").setup() end
-	}
-
-	-- Carbon now (Create beautiful code snippets)
+	-- Carbon Now: generate carbon snippets from selection
 	use {
 		"ellisonleao/carbon-now.nvim",
 		opt = true,
 		ft = ProgLangs,
 		config = get_config("carbon")
-	}
-
-	-- Zen Mode
-	use {
-		"folke/zen-mode.nvim",
-		config = get_config("zen")
-	}
-
-	-- Statusline
-	use {
-		"nvim-lualine/lualine.nvim",
-		requires = {
-			"kyazdani42/nvim-web-devicons",
-			"arkav/lualine-lsp-progress"
-		},
-		config = get_config("lualine")
-	}
-
-	-- Tabs
-	use {
-		"romgrk/barbar.nvim",
-		requires = "kyazdani42/nvim-web-devicons",
-		config = get_config("barbar")
-	}
-
-	-- Colouriser
-	use {
-		"norcalli/nvim-colorizer.lua",
-		opt = true,
-		ft = ProgLangs,
-		config = get_config("colour")
-	}
-
-	-- Nord theme
-	use {
-		"shaunsingh/nord.nvim",
-		config = get_config("nord")
 	}
 
 	if Packer_bootstrap then
