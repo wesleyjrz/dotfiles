@@ -38,7 +38,15 @@
 		# bisq-desktop
 		nodePackages.coinmon
 
-		### Retroarch
+		### Editors
+		gimp    # image editor
+		shotcut # video editor
+
+		### Study tools
+		minder   # create mind maps
+		anki-bin # flashcards
+
+		### Games
 		retroarchBare
 		libretro.desmume
 		libretro.dosbox
@@ -48,11 +56,9 @@
 		libretro.mupen64plus
 		libretro.ppsspp
 		libretro.snes9x
+		# taisei
 
 		### Misc
-		minder   # create mind maps
-		anki-bin # flashcards
 		cmatrix
-		# taisei
 	];
 }

@@ -39,7 +39,6 @@
 		mupdf           # PDF viewer
 		htop-vim        # process viewer
 		librewolf       # web browser
-		gimp            # image editor
 
 		### Archivers
 		zip unzip # zip files
