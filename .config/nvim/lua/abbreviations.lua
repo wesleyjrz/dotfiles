@@ -14,5 +14,4 @@
 vim.cmd([[
 	iab wj Wesley Jr.
 	iab wsjr Wesley V. Santos Jr.
-	iab copyr Copyright © <year> - All Rigths Reserved.
 ]])
