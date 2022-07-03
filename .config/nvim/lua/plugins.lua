@@ -177,7 +177,7 @@ return require("packer").startup(function(use)
 
 	-- Preconfigured snippets
 	use {
-		"rafamadriz/friendly-snippets",
+		"wesleyjrz/friendly-snippets",
 		opt = true,
 		ft = ProgLangs
 	}
