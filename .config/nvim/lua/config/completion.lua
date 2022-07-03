@@ -6,10 +6,22 @@ lspkind.init()
 
 cmp.setup {
 	mapping = {
-		["<C-d>"] = cmp.mapping.scroll_docs(-4),
-		["<C-f>"] = cmp.mapping.scroll_docs(4),
+		["<C-j>"] = function(fallback)
+			if cmp.visible() then
+				cmp.select_next_item()
+			else
+				fallback()
+			end
+		end,
+		["<C-k>"] = function(fallback)
+			if cmp.visible() then
+				cmp.select_prev_item()
+			else
+				fallback()
+			end
+		end,
 		["<C-e>"] = cmp.mapping.close(),
-		["<C-y>"] = cmp.mapping.confirm {
+		["<C-l>"] = cmp.mapping.confirm {
 			behavior = cmp.ConfirmBehavior.Insert,
 			select = true
 		},
@@ -17,11 +29,11 @@ cmp.setup {
 	},
 
 	sources = {
-		{ name = "nvim_lsp", keyword_length = 4 },
-		{ name = "path" },
-		{ name = "nvim_lua", keyword_length = 4 },
-		{ name = "buffer", keyword_length = 4 },
-		{ name = "luasnip", keyword_length = 4 }
+		{ name = "nvim_lsp", keyword_length = 3 },
+		{ name = "path", keyword_length = 2 },
+		{ name = "nvim_lua", keyword_length = 3 },
+		{ name = "buffer", keyword_length = 5 },
+		{ name = "luasnip", keyword_length = 3 }
 	},
 
 	snippet = {

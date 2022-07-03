@@ -168,7 +168,18 @@ return require("packer").startup(function(use)
 		"L3MON4D3/LuaSnip",
 		opt = true,
 		ft = ProgLangs,
-		requires = { "saadparwaiz1/cmp_luasnip", opt = true, ft = ProgLangs },
+		requires = {
+			-- Autocompletion support
+			{ "saadparwaiz1/cmp_luasnip", opt = true, ft = ProgLangs },
+		},
+		config = get_config("snippets")
+	}
+
+	-- Preconfigured snippets
+	use {
+		"rafamadriz/friendly-snippets",
+		opt = true,
+		ft = ProgLangs
 	}
 
 	-- Carbon Now: generate carbon snippets from selection
