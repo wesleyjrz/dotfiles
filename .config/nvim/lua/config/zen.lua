@@ -13,8 +13,8 @@ key("n", "<C-A-z>", "<cmd>ZenMode<CR>", {})
 
 require("zen-mode").setup {
 	window = {
-		width = 100,
-		height = 1,
+		width = 112,
+		height = 38,
 		options = {
 			number = true,
 			relativenumber = true,
