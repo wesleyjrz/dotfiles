@@ -30,10 +30,10 @@ cmp.setup {
 
 	sources = {
 		{ name = "path", keyword_length = 2 },
-		{ name = "luasnip", keyword_length = 3 },
-		{ name = "nvim_lsp", keyword_length = 3 },
-		{ name = "nvim_lua", keyword_length = 3 },
-		{ name = "buffer", keyword_length = 5 }
+		{ name = "luasnip", keyword_length = 2 },
+		{ name = "nvim_lsp", keyword_length = 2 },
+		{ name = "nvim_lua", keyword_length = 2 },
+		{ name = "buffer", keyword_length = 4 }
 	},
 
 	snippet = {
