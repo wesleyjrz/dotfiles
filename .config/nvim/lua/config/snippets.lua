@@ -1,4 +1,4 @@
-local ls = require"luasnip"
+local ls = require("luasnip")
 local s = ls.snippet
 local sn = ls.snippet_node
 local isn = ls.indent_snippet_node
@@ -14,9 +14,18 @@ local fmt = require("luasnip.extras.fmt").fmt
 local m = require("luasnip.extras").m
 local lambda = require("luasnip.extras").l
 local postfix = require("luasnip.extras.postfix").postfix
+local key = vim.api.nvim_set_keymap
+local opts = { noremap = true }
 
 -- Load friendly snippets
 require("luasnip.loaders.from_vscode").lazy_load()
+
+-----------------
+-- Keymappings --
+-----------------
+
+key("i", "<A-C-j>", "<cmd>lua require('luasnip').jump(1)<CR>", opts)
+key("i", "<A-C-k>", "<cmd>lua require('luasnip').jump(-1)<CR>", opts)
 
 ---------------------
 -- Custom snippets --

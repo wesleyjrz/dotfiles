@@ -13,6 +13,14 @@
 export TERM=xterm-256color
 export COLORTERM=truecolor
 
+### History ###
+
+export SAVEHIST="1000"
+export HISTSIZE="100"
+export HISTFILE=$HOME/.local/cache/zsh-hist
+setopt INC_APPEND_HISTORY # save history in real time
+setopt HIST_FIND_NO_DUPS  # no duplicates
+
 ### ZSH completion system ###
 
 zstyle ":completion:*" menu select

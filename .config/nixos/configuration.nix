@@ -196,7 +196,6 @@
 		# below, but for some reason those are giving wrong paths.
 		# Example: $XDG_HOME_CONFIG returns "/.config" instead of "/home/wesleyjrz/.config"
 		ZDOTDIR         = "\${HOME}/.config/zsh";
-		HISTFILE        = "\${HOME}/.local/cache/zsh-hist";
 		ZSHZ_DATA       = "\${HOME}/.local/cache/zshz";
 		XINITRC         = "\${HOME}/.config/X11/xinitrc";
 		GTK_RC_FILES    = "\${HOME}/.config/gtk-1.0/gtkrc";
