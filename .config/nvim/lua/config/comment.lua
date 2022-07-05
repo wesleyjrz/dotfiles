@@ -1,3 +1,15 @@
+local ft = require("Comment.ft")
+
+-------------------
+-- Commentstring --
+-------------------
+
+ft.set("c", "/*%s*/")
+
+-------------------
+-- Configuration --
+-------------------
+
 require("Comment").setup {
 	padding = true,     -- add a space b/w the comment and the line
 	toggler = {
