@@ -11,18 +11,16 @@ ft.set("c", "/*%s*/")
 -------------------
 
 require("Comment").setup {
-	padding = true,     -- add a space b/w the comment and the line
-	toggler = {
-		line = "<C-c>",   -- toggle line-comment
-	},
+	padding = true,   -- add a space b/w the comment and the line
+	toggler = { line = "<C-c>" },
 	opleader = {
-		line = "gc",      -- toggle line-comment
-		block = "gb"      -- toggle block-comment
+		line = "gc",
+		block = "gb"
 	},
 	extra = {
-		above = "gcO",    -- add comment on the line above
-		below = "gco",    -- add comment on the line below
-		eol = "gcA",      -- add comment at the end of line
+		above = "gcO",
+		below = "gco",
+		eol = "gcA",
 	},
 	mappings = {
 		-- Operator-pending mapping

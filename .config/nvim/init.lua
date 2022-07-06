@@ -13,8 +13,8 @@
 -- Options
 require("options")
 
--- Mappings
-require("mappings")
+-- Keymaps
+require("keymaps")
 
 -- Auto commands / User commands
 require("commands")

@@ -1,11 +1,12 @@
 local key = vim.api.nvim_set_keymap
+local opts = { noremap = true }
 
------------------
--- Keymappings --
------------------
+-------------
+-- Keymaps --
+-------------
 
--- Enable / Disable Zen Mode (Ctrl + Alt + Z)
-key("n", "<C-A-z>", "<cmd>ZenMode<CR>", {})
+-- Toggle Zen Mode (Ctrl + Alt + z)
+key("n", "<C-A-z>", "<cmd>ZenMode<CR>", opts)
 
 -------------------
 -- Configuration --

@@ -1,23 +1,26 @@
 local lspconfig = require("lspconfig")
 local key = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
+local opts = { noremap = true }
 
------------------
--- Keymappings --
------------------
+-------------
+-- Keymaps --
+-------------
 
--- Open diagnostic float window (Space + Space)
-key("n", "<space><space>", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+-- Open diagnostic floating window (Space)
+key("n", "<space>", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 
--- Navigate between diagnostics (Space + k / j)
-key("n", "<space>k", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
-key("n", "<space>j", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+-- Navigate between diagnostics (Space + p/n)
+key("n", "<space>p", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+key("n", "<space>n", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
 
--- Show a buffer with diagnostics (Space + d)
-key("n", "<space>d", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+-- Show a buffer with all diagnostics (Ctrl + Space)
+key("n", "<C-space>", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 
--- Rename a variable
+-- Rename a variable (Space + cw)
 key("n", "<space>cw", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+
+-- Display all references for the symbol (Space + f)
+key("n", "<space>f", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 
 -------------------
 -- Configuration --

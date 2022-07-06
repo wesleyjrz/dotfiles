@@ -20,12 +20,13 @@ local opts = { noremap = true }
 -- Load friendly snippets
 require("luasnip.loaders.from_vscode").lazy_load()
 
------------------
--- Keymappings --
------------------
+-------------
+-- Keymaps --
+-------------
 
-key("i", "<A-C-j>", "<cmd>lua require('luasnip').jump(1)<CR>", opts)
-key("i", "<A-C-k>", "<cmd>lua require('luasnip').jump(-1)<CR>", opts)
+-- Navigate inside the snippet (Ctrl + p/n)
+key("i", "<C-p>", "<cmd>lua require('luasnip').jump(-1)<CR>", opts)
+key("i", "<C-n>", "<cmd>lua require('luasnip').jump(1)<CR>", opts)
 
 ---------------------
 -- Custom snippets --

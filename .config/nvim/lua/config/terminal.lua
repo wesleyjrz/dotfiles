@@ -1,14 +1,19 @@
 local key = vim.api.nvim_set_keymap
 local autocmd = vim.api.nvim_create_autocmd
+local opts = { noremap = true }
 
--- Toggle terminal even in terminal mode (Ctrl + Alt + t)
-key("t", "<C-A-t>", "<C-\\><C-n><C-A-t>", {})
+-------------
+-- Keymaps --
+-------------
 
--- Navigate from the terminal window (Ctrl + h/j/k/l)
-key("t", "<C-h>", "<C-\\><C-n><C-w>h", {})
-key("t", "<C-j>", "<C-\\><C-n><C-w>j", {})
-key("t", "<C-k>", "<C-\\><C-n><C-w>k", {})
-key("t", "<C-l>", "<C-\\><C-n><C-w>l", {})
+-- Toggle terminal (Ctrl + Alt + s)
+key("t", "<C-A-s>", "<C-\\><C-n><C-A-s>", opts)
+
+-- Navigate from/to the terminal window (Ctrl + h/j/k/l)
+key("t", "<C-w>h", "<C-\\><C-n><C-w>h", opts)
+key("t", "<C-w>j", "<C-\\><C-n><C-w>j", opts)
+key("t", "<C-w>k", "<C-\\><C-n><C-w>k", opts)
+key("t", "<C-w>l", "<C-\\><C-n><C-w>l", opts)
 
 -- Terminal window options
 autocmd("TermOpen", {
@@ -18,12 +23,11 @@ autocmd("TermOpen", {
 	             setlocal nocursorline ]]
 })
 
--- The following option will hide the buffer when it is closed instead of
--- deleting it
+-- Just hide the terminal buffer
 vim.o.hidden = true
 
 require("nvim-terminal").setup {
-	toggle_keymap = "<C-A-t>",
+	toggle_keymap = "<C-A-s>",
 	window = {
 		position = "botright",
 		split = "sp",

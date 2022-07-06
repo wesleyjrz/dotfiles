@@ -6,14 +6,14 @@ lspkind.init()
 
 cmp.setup {
 	mapping = {
-		["<C-j>"] = function(fallback)
+		["<C-n>"] = function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
 			else
 				fallback()
 			end
 		end,
-		["<C-k>"] = function(fallback)
+		["<C-p>"] = function(fallback)
 			if cmp.visible() then
 				cmp.select_prev_item()
 			else
@@ -25,11 +25,11 @@ cmp.setup {
 			behavior = cmp.ConfirmBehavior.Insert,
 			select = true
 		},
-		["<C-space>"] = cmp.mapping.complete()
+		["<C-f>"] = cmp.mapping.complete()
 	},
 
 	sources = {
-		{ name = "path", keyword_length = 2 },
+		{ name = "path", keyword_length = 3 },
 		{ name = "luasnip", keyword_length = 2 },
 		{ name = "nvim_lsp", keyword_length = 2 },
 		{ name = "nvim_lua", keyword_length = 2 },
@@ -56,6 +56,6 @@ cmp.setup {
 	},
 
 	experimental = {
-		ghost_text = true
+		ghost_text = false
 	}
 }
