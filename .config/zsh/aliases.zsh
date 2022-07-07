@@ -98,7 +98,7 @@ alias hex="xxd"       # print file hex
 
 ### List available fonts ###
 
-alias fonts="fc-list | bat"
+alias fonts="fc-list | awk -F \"/\" 'length(\$9) > 0 {print \$9}' | awk 'BEGIN{FS=\":\"; OFS=\":\"}{print \$1,\$2\"\n\"}' | bat"
 
 ### Test connection ###
 
@@ -115,3 +115,7 @@ alias cc="gcc -ansi -pedantic -Wall -Wextra -Werror"
 # Use `sudo` with Docker by default
 # NOTE: this may be dangerous
 alias docker="sudo docker"
+
+### Coinmon (Cryptocurrency prices) ###
+
+alias coin="coinmon --find XMR,ETH,BTC,SCRT,ADA,DOGE,SHIB,LTC"
