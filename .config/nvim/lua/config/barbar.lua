@@ -16,8 +16,8 @@ key("n", "<C-e>", ":BufferClose<CR>", opts)
 key("n", "<C-f>", ":BufferPick<CR>", opts)
 
 -- Move tabs (Ctrl + P/N)
-key("n", "<C-P>", ":BufferMovePrevious<CR>", opts)
-key("n", "<C-N>", ":BufferMoveNext<CR>", opts)
+key("n", "<C-S-p>", ":BufferMovePrevious<CR>", opts)
+key("n", "<C-S-n>", ":BufferMoveNext<CR>", opts)
 
 -------------------
 -- Configuration --
