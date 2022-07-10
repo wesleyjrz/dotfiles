@@ -28,7 +28,7 @@ o.pumheight = 10         -- max number of items to show in the popup menu
 wo.number = true         -- show line numbers
 wo.numberwidth = 2       -- number of columns to use for line number
 wo.relativenumber = true -- show relative line numbers
-o.cursorline = true      -- highlight current line
+o.cursorline = false     -- highlight current line
 o.scrolloff = 8          -- scroll vertically easier
 o.sidescrolloff = 8      -- scroll horizontally easier
 
