@@ -59,7 +59,7 @@
 		# Firewall
 		firewall = {
 			enable = true;
-			# allowedTCPPorts = [ ... ];
+			allowedTCPPorts = [ 80 443 ];
 			# allowedUDPPorts = [ ... ];
 		};
 	};

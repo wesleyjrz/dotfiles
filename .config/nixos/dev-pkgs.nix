@@ -46,7 +46,6 @@ in
 		file          # show file types
 		binutils      # set of tools for creating and managing binary programs
 		unixtools.xxd # hexdump
-		tunnelto
 
 		### Assembly
 		nasm # portable 80x86 assembler
