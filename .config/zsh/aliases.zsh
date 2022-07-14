@@ -119,3 +119,11 @@ alias docker="sudo docker"
 ### Coinmon (Cryptocurrency prices) ###
 
 alias coin="coinmon --find XMR,ETH,BTC,SCRT,ADA,DOGE,SHIB,LTC"
+
+### Run web server ###
+
+alias start-server="/bin/sh $HOME/Development/web-server.sh"
+
+### Docker containers ###
+
+alias kali="/bin/sh $HOME/Documents/docker-images/kali/kali.sh"
