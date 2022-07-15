@@ -26,6 +26,7 @@
 		maim                        # take screenshots
 		pulsemixer                  # audio mixing system
 		unclutter-xfixes            # hide cursor
+		xdragon                     # drag-and-drop for X
 		# libnotify                   # send notifications
 
 		### Main programs
