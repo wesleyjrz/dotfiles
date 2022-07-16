@@ -39,7 +39,7 @@
 		mpv-unwrapped   # video + audio player + image viewer
 		mupdf           # PDF viewer
 		htop-vim        # process viewer
-		librewolf tor   # web browser
+		brave           # web browser
 
 		### Archivers
 		zip unzip # zip files

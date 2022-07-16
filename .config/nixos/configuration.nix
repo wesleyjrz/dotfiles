@@ -162,7 +162,7 @@
 		# Default programs
 		EDITOR   = "nvim";
 		TERMINAL = "termite";
-		BROWSER  = "librewolf";
+		BROWSER  = "brave";
 
 		# Extra settings
 		PYTHONSTARTUP               = "\${HOME}/.config/pythonrc";
