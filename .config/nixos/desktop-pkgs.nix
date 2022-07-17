@@ -49,5 +49,7 @@
 		### Customisation
 		nordic
 		papirus-icon-theme
+		libsForQt5.qt5ct
+		libsForQt5.qtstyleplugin-kvantum
 	];
 }
