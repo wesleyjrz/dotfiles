@@ -120,10 +120,6 @@ alias docker="sudo docker"
 
 alias coin="coinmon --find XMR,ETH,BTC,SCRT,ADA,DOGE,SHIB,LTC"
 
-### Run web server ###
-
-alias start-server="/bin/sh $HOME/Development/web-server.sh"
-
 ### Docker containers ###
 
-alias kali="/bin/sh $HOME/Documents/docker-images/kali/kali.sh"
+alias kali="sudo docker start --interactive kali"
