@@ -3,7 +3,7 @@
 ProgLangs = {
 	"config", "sh", "zsh", "c", "cpp", "lua", "python", "javascript",
 	"html", "css", "sass", "scss", "plaintex", "tex", "st", "markdown",
-	"json", "php", "nix", "make", "dockerfile", "toml"
+	"json", "php", "nix", "make", "dockerfile", "toml", "dosini"
 }
 
 -- List of supported languages in Treesitter
