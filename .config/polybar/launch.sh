@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CONFIG="$XDG_CONFIG_HOME/polybar/config"
+CONFIG="$XDG_CONFIG_HOME/polybar/config.ini"
 
 # Terminate already running bar instances
 pkill polybar
