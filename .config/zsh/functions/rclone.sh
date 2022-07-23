@@ -124,3 +124,38 @@ ftpumount () {
 		rmdir $HOME/FTP
 	fi
 }
+
+#############
+### Extra ###
+#############
+
+BACKUP_DISK_DEV="backup"
+BACKUP_DISK_DIR="$HOME/Backup"
+
+bpmount () {
+	# Create directories if they don't exist
+	if [ ! -d "$BACKUP_DISK_DIR" ] ; then
+		mkdir $BACKUP_DISK_DIR
+	fi
+
+	# Mount rclone ftp partitions if they aren't mounted yet
+	if [ -z "$(\ls -A $BACKUP_DISK_DIR)" ] ; then
+		sudo mount --label $BACKUP_DISK_DEV $BACKUP_DISK_DIR ; echo "Backup disk succesfully mounted."
+	else
+		echo "Backup disk is already mounted."
+	fi
+}
+
+bpumount () {
+	# Umount rclone ftp partitions
+	if [ ! -z "$(\ls -A $BACKUP_DISK_DIR)" ] ; then
+		sudo umount --quiet $BACKUP_DISK_DIR ; echo "Backup disk succesfully umounted."
+	else
+		echo "Backup disk isn't mounted."
+	fi
+
+	# Remove directories
+	if [ -d "$BACKUP_DISK_DIR" ] ; then
+		rmdir $BACKUP_DISK_DIR
+	fi
+}
