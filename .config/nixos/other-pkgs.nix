@@ -35,7 +35,7 @@
 		monero-gui
 		mycrypto
 		electrum
-		# bisq-desktop
+		bisq-desktop
 		nodePackages.coinmon
 
 		### Editors
@@ -43,7 +43,6 @@
 		shotcut # video editor
 
 		### Study tools
-		minder   # create mind maps
 		anki-bin # flashcards
 
 		### Games
