@@ -199,6 +199,9 @@
 		GTK_RC_FILES    = "\${HOME}/.config/gtk-1.0/gtkrc";
 		GTK2_RC_FILES   = "\${HOME}/.config/gtk-2.0/gtkrc";
 		ANDROID_HOME    = "\${HOME}/.local/share/android";
+		GNUPGHOME       = "\${HOME}/.local/share/gnupg";
+		CGDB_DIR        = "\${HOME}/.config/cgdb";
+		ELECTRUMDIR     = "\${HOME}/.local/share/electrum";
 		# WGETRC        = "\${HOME}/.config/wgetrc";
 	};
 
