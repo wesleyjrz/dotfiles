@@ -29,6 +29,10 @@ zstyle :compinstall filename "~/.config/zsh/.zshrc"
 
 autoload -Uz compinit ; compinit
 
+### Load gnupg default tty ###
+
+export GPG_TTY=$(tty)
+
 ### Default man pager ###
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"

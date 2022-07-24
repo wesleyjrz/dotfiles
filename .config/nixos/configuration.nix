@@ -141,10 +141,12 @@
 	# Enable OpenSSH daemon
 	services.openssh.enable = true;
 
+	services.pcscd.enable = true;
 	programs = {
 		mtr.enable = true;
 		gnupg.agent = {
 			enable = true;
+			pinentryFlavor = "curses";
 			enableSSHSupport = true;
 		};
 	};
@@ -158,51 +160,51 @@
 	### Environment variables
 	environment.sessionVariables = rec {
 		# Default programs
-		EDITOR   = "nvim";
+		EDITOR	 = "nvim";
 		TERMINAL = "termite";
 		BROWSER  = "brave";
 
 		# Extra settings
-		PYTHONSTARTUP               = "\${HOME}/.config/pythonrc";
-		RANGER_LOAD_DEFAULT_RC      = "FALSE";
-		QT_QPA_PLATFORMTHEME        = "qt5ct";
-		ZSHZ_CMD                    = "c";
-		ZSHZ_TILDE                  = "1";
-		ZSHZ_TRAILING_SLASH         = "1";
-		ZVM_VI_ESCAPE_BINDKEY       = "^G";
-		ZVM_INIT_MODE               = "sourcing";
-		ZVM_INSERT_MODE_CURSOR      = "\$ZVM_CURSOR_BLINKING_BLOCK";
-		ZVM_NORMAL_MODE_CURSOR      = "\$ZVM_CURSOR_BLINKING_BEAM";
-		ZVM_OPPEND_MODE_CURSOR      = "\$ZVM_CURSOR_BLINKING_UNDERLINE";
+		PYTHONSTARTUP								= "\${HOME}/.config/pythonrc";
+		RANGER_LOAD_DEFAULT_RC			= "FALSE";
+		QT_QPA_PLATFORMTHEME				= "qt5ct";
+		ZSHZ_CMD										= "c";
+		ZSHZ_TILDE									= "1";
+		ZSHZ_TRAILING_SLASH					= "1";
+		ZVM_VI_ESCAPE_BINDKEY				= "^G";
+		ZVM_INIT_MODE								= "sourcing";
+		ZVM_INSERT_MODE_CURSOR			= "\$ZVM_CURSOR_BLINKING_BLOCK";
+		ZVM_NORMAL_MODE_CURSOR			= "\$ZVM_CURSOR_BLINKING_BEAM";
+		ZVM_OPPEND_MODE_CURSOR			= "\$ZVM_CURSOR_BLINKING_UNDERLINE";
 		ZVM_VI_HIGHLIGHT_BACKGROUND = "blue";
-		FZF_DEFAULT_OPTS            = "--height 40% --border";
+		FZF_DEFAULT_OPTS						= "--height 40% --border";
 
 		# Enable Ibus
 		GTK_IM_MODULE = "ibus";
-		QT_IM_MODULE  = "ibus";
-		XMODIFIERS    = "@im=ibus";
+		QT_IM_MODULE	= "ibus";
+		XMODIFIERS		= "@im=ibus";
 
 		# Clean up $HOME (XDG Compliance settings)
 		XDG_RUNTIME_DIR = "/run/user/1000";
-		XDG_CACHE_HOME  = "\${HOME}/.local/cache";
-		XDG_STATE_HOME  = "\${HOME}/.local/state";
+		XDG_CACHE_HOME	= "\${HOME}/.local/cache";
+		XDG_STATE_HOME	= "\${HOME}/.local/state";
 		XDG_CONFIG_HOME = "\${HOME}/.config";
-		XDG_BIN_HOME    = "\${HOME}/.local/bin";
-		XDG_DATA_HOME   = "\${HOME}/.local/share";
-		XAUTHORITY      = "\${XDG_RUNTIME_DIR}/Xauthority";
+		XDG_BIN_HOME		= "\${HOME}/.local/bin";
+		XDG_DATA_HOME		= "\${HOME}/.local/share";
+		XAUTHORITY			= "\${XDG_RUNTIME_DIR}/Xauthority";
 		# NOTE: I could use XDG variables to simplify the configuration
 		# below, but for some reason those are giving wrong paths.
 		# Example: $XDG_HOME_CONFIG returns "/.config" instead of "/home/wesleyjrz/.config"
-		ZDOTDIR         = "\${HOME}/.config/zsh";
-		ZSHZ_DATA       = "\${HOME}/.local/cache/zshz";
-		XINITRC         = "\${HOME}/.config/X11/xinitrc";
-		GTK_RC_FILES    = "\${HOME}/.config/gtk-1.0/gtkrc";
-		GTK2_RC_FILES   = "\${HOME}/.config/gtk-2.0/gtkrc";
-		ANDROID_HOME    = "\${HOME}/.local/share/android";
-		GNUPGHOME       = "\${HOME}/.local/share/gnupg";
-		CGDB_DIR        = "\${HOME}/.config/cgdb";
-		ELECTRUMDIR     = "\${HOME}/.local/share/electrum";
-		# WGETRC        = "\${HOME}/.config/wgetrc";
+		ZDOTDIR					= "\${HOME}/.config/zsh";
+		ZSHZ_DATA				= "\${HOME}/.local/cache/zshz";
+		XINITRC					= "\${HOME}/.config/X11/xinitrc";
+		GTK_RC_FILES		= "\${HOME}/.config/gtk-1.0/gtkrc";
+		GTK2_RC_FILES		= "\${HOME}/.config/gtk-2.0/gtkrc";
+		ANDROID_HOME		= "\${HOME}/.local/share/android";
+		GNUPGHOME				= "\${HOME}/.local/share/gnupg";
+		CGDB_DIR				= "\${HOME}/.config/cgdb";
+		ELECTRUMDIR			= "\${HOME}/.local/share/electrum";
+		# WGETRC				= "\${HOME}/.config/wgetrc";
 	};
 
 	### Shell

@@ -28,6 +28,7 @@
 		unclutter-xfixes            # hide cursor
 		xdragon                     # drag-and-drop for X
 		# libnotify                   # send notifications
+		pinentry-curses
 
 		### Main programs
 		termite         # terminal emulator

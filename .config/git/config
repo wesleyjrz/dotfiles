@@ -11,6 +11,7 @@
 [user]
 	name = Wesley Jr.
 	email = wesleyjr2002@gmail.com
+	signingkey = E1B1B55B447E5D58
 
 [core]
 	editor = vim
@@ -27,6 +28,9 @@
 	last = log -1 HEAD
 	lastmsg = commit --amend --message
 	ignore-changes = update-index --assume-unchanged
+
+[commit]
+	gpgsign = true
 
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
