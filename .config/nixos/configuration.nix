@@ -28,6 +28,7 @@
 
 	### GRUB
 	boot.loader = {
+		timeout = 15;
 		grub = {
 			enable = true;
 			version = 2;

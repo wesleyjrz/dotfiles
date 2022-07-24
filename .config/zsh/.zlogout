@@ -11,6 +11,7 @@
 # Umount rclone partitions
 rumount
 ftpumount
+bpumount
 
 # Clear clipboard
 greenclip clear
